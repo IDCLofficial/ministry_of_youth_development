@@ -1,0 +1,49 @@
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import "./globals.css";
+
+const satoshiFont = localFont({
+  src: [
+    {
+      path: "/fonts/satoshi-cdnfonts/Satoshi-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "/fonts/satoshi-cdnfonts/Satoshi-Medium.otf",
+      weight: "500",
+      style: "medium",
+    },
+    {
+      path: "/fonts/satoshi-cdnfonts/Satoshi-Italic.otf",
+      weight: "500",
+      style: "medium",
+    },
+    {
+      path: "/fonts/satoshi-cdnfonts/Satoshi-Bold.otf",
+      weight: "500",
+      style: "medium",
+    },
+  ],
+});
+
+export const metadata: Metadata = {
+  title: "Ministry of Finance",
+  description: "Ministry of Finance",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body
+        className={`antialiased ${satoshiFont.className}`}
+      >
+        {children}
+      </body>
+    </html>
+  );
+}
