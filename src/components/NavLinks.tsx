@@ -4,15 +4,15 @@ import React from "react";
 const NavLinks = () => {
     return (
         <nav>
-            <ul className="flex gap-6 list-none p-0 m-0">                
-                <li><Link href="/home">Home</Link></li>
-                <li><Link href="/about-us">About Us</Link></li>
-                <li><Link href="/projects">Projects</Link></li>
-                <li><Link href="/news">News</Link></li>
-                <li><Link href="/units">Units</Link></li>
-                <li><Link href="/events">Events</Link></li>
-                <li><Link href="/media">Media</Link></li>
-                <li><Link href="/contact-us">Contact Us</Link></li>
+            <ul className="flex items-center gap-6 list-none p-0 m-0">                
+                <li><Link href="/" className="text-white">Home</Link></li>
+                <li><Link href="/about-us" className="text-white">About Us</Link></li>
+                <li><Link href="/projects" className="text-white">Projects</Link></li>
+                <li><Link href="/news" className="text-white">News</Link></li>
+                <li><Link href="/units" className="text-white">Units</Link></li>
+                <li><Link href="/events" className="text-white">Events</Link></li>
+                <li><Link href="/media" className="text-white">Media</Link></li>
+                <li><Link href="/contact-us" className="text-white">Contact Us</Link></li>
             </ul>
         </nav>
     );
