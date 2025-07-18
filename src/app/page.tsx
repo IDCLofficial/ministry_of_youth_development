@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <div className="h-screen">
       <Hero />
-      <section className="h-[85vh] px-[3rem] bg-[url('/images/gradient.png')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center">
+      <section className="px-[3rem] py-[5rem] bg-[url('/images/gradient.png')] bg-cover bg-center bg-no-repeat flex flex-col justify-center">
         <div className="w-full flex flex-[1fr 1fr] justify-center items-center gap-20">
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 w-[2/4]">
             <Title label="About Us"/>
             <h2 className="text-white text-[43px] font-bold">Our Mandate – <br/>Ministry of Finance</h2>
           </div>
@@ -24,7 +24,10 @@ export default function Home() {
               <AppLink href="/about-us" label="Learn More" variant="secondary" className="border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] font-medium"/>
             </div>
           </div>
-
+        </div>
+        <div className="flex items-center gap-10">
+          <Image src="/images/homeImage1.png" alt="about-us" width={500} height={500}  className="rounded-[10px] h-full" />
+          <Image src="/images/homeImage2.png" alt="about-us" width={300} height={500} className="rounded-[10px] h-full"/>
         </div>
       </section>
     </div>
