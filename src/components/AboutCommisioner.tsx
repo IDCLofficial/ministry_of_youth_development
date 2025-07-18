@@ -1,0 +1,39 @@
+import Image from "next/image";
+import { AppLink } from "./AppLink";
+
+interface AboutCommisionerProps {
+    imgSrc: string;
+    title: string;
+}
+
+export default function AboutCommisioner({imgSrc, title}: AboutCommisionerProps) {
+  return (
+    <section className="w-full bg-[#f3f8fa] py-20 flex justify-center">
+        <div className="flex flex-col md:flex-row items-center gap-18 w-full px-4 px-[3rem]">
+            {/* Left: Commissioner Image */}
+            <div className="bg-white rounded-xl shadow-lg p-2 flex-shrink-0">
+                <div className="relative w-[300px] h-[340px] md:w-[500px] md:h-[360px]">
+                    <Image
+                    src={imgSrc}
+                    alt="Commissioner"
+                    fill
+                    className="object-contain rounded-xl"
+                    sizes="(max-width: 768px) 300px, 320px"
+                    />
+                </div>
+            </div>
+            {/* Right: Text Content */}
+            <div className="flex-1 ">
+                <h2 className="text-2xl md:text-[43px] font-bold text-dark-primary mb-4">{title}</h2>
+                <p className="text-dark-primary-body text-sm md:text-base mb-4">
+                    Dr. Chimezie Paulinus Amadi is the Commissioner for Digital Economy and E-Government in Imo State, Nigeria. Appointed by Governor Hope Uzodimma, he formerly worked with the Nigerian Communications Commission (NCC). He leads the Digital Imo Agenda (IDEA 2022—2026), which focuses on digital skills, infrastructure, advocacy, and partnerships.
+                </p>
+                <p className="text-dark-primary-body text-sm md:text-base mb-6 text-justify">
+                    He launched SkillUpImo, aiming to train 100,000 youths in tech skills like software development and blockchain. His work promotes smart cities, digital governance, and youth empowerment. Dr. Amadi has received awards for leadership and innovation in public service.
+                </p>
+                <AppLink href="/about-us" label="Our Team" variant="primary" className="border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] font-medium"/>
+            </div>
+        </div>
+    </section>
+  );
+} 

@@ -1,0 +1,48 @@
+import Image from "next/image";
+import { AppLink } from "./AppLink";
+
+const news = [
+  {
+    title: "SKILLUP IMO COHORT 5 GRADUATION CEREMONY COMPLETED",
+    desc: "Over 5,000 trained in cybersecurity, UI/UX, AI — May 2025",
+    date: "30th May 2025",
+    img: "/images/homeImage1.png"
+  },
+  {
+    title: "SKILLUP IMO COHORT 5 GRADUATION CEREMONY COMPLETED",
+    desc: "Over 5,000 trained in cybersecurity, UI/UX, AI — May 2025",
+    date: "30th May 2025",
+    img: "/images/homeImage1.png"
+  },
+  {
+    title: "SKILLUP IMO COHORT 5 GRADUATION CEREMONY COMPLETED",
+    desc: "Over 5,000 trained in cybersecurity, UI/UX, AI — May 2025",
+    date: "30th May 2025",
+    img: "/images/homeImage1.png"
+  },
+];
+
+export default function LatestNews() {
+  return (
+    <section className="w-full px-8 py-16 bg-white">
+      <h2 className="text-dark-primary text-3xl md:text-[43px] font-medium text-center mb-10">Latest News</h2>
+      <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 mb-8">
+        {news.map((item, idx) => (
+          <div key={idx} className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
+            <div className="relative w-full h-[180px]">
+              <Image src={item.img} alt={item.title} fill className="object-cover" />
+            </div>
+            <div className="p-5 flex-1 flex flex-col">
+              <h3 className="text-dark-secondary text-[15px] font-bold text-gray-900 mb-2 uppercase leading-snug">{item.title}</h3>
+              <p className="text-dark-primary-body text-gray-700 text-sm mb-4">{item.desc}</p>
+              <span className="text-dark-tertiary text-[15px] font-bold text-gray-900 mt-auto">{item.date}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center">
+        <AppLink href="/news" label="See More" variant="primary" className="border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] font-medium"/>
+      </div>
+    </section>
+  );
+} 
