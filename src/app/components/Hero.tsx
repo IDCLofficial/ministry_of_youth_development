@@ -13,7 +13,7 @@ export const Hero = ({title, caption, subtitle}: HeroProps) => {
             <div className="relative z-10 py-10">
                 <div className="w-[60%] flex flex-col ">
                     <Title label={title}/>
-                    <h1 className="text-[60px] font-bold text-white">{caption}</h1>
+                    <h1 className="text-[3rem] font-bold text-white">{caption}</h1>
                     <p className="text-[1rem] font-light leading-[1.5] text-white">
                         {subtitle}
                     </p>
