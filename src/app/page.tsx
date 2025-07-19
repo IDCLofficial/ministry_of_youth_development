@@ -37,12 +37,13 @@ export default function Home() {
       </section>
       <Stats />
       <FeaturedPartners />
-      <CTASection />
-      <Footer 
-        logo="/logo.png" 
-        ministry="Ministry of Finance" 
-        description="The Imo State Ministry of Finance is committed to managing public funds with transparency, efficiency, and accountability. We drive fiscal policy, budget planning, and revenue generation to support sustainable development and economic growth across the state." 
+      <CTASection 
+        heading="Ready to Experience the New Imo?"
+        subtext="Discover our vision for an inclusive, empowered, and connected state."
+        buttonLabel="Contact Us"
+        buttonHref="/contact-us"
       />
+      <Footer/>
     </div>
   );
 }

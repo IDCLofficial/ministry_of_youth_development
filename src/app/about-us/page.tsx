@@ -2,6 +2,9 @@ import { AboutUsHero } from "./AboutUsHero";
 import { AboutSection } from "./AboutSection";
 import { ObjectivesSection } from "./ObjectivesSection";
 import { CommissionerSection } from "./CommissionerSection";
+import { StructuresSection } from "./StructuresSection";
+import CTASection from "../components/CTASection";
+import Footer from "../components/Footer";
 
 export default function AboutUs() {
     return (
@@ -19,6 +22,15 @@ export default function AboutUs() {
                 commissionerDescription="As Commissioner for Digital Economy and E-Government, Dr. Chimezie Amadi is a seasoned leader and policy advocate dedicated to bridging the digital divide. Under his direction, IMDEEG has empowered thousands of citizens through tech training and expanded digital services across Imo State."
             />     
             <ObjectivesSection />
+            <StructuresSection 
+                imgSrc="/images/building.png"
+            />
+            <CTASection 
+                heading="Join our mission to make Imo the digital heart of Nigeria"
+                buttonLabel="See Our Projects"
+                buttonHref="/projects"
+            />
+            <Footer />
         </div>
     )
 }

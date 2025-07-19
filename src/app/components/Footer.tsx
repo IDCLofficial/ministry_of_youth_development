@@ -1,24 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface FooterProps {
-    logo: string;
-    ministry: string;
-    description: string;
-}
-
-export default function Footer({logo, ministry, description}: FooterProps) {
-    const quickLinks = [
+const info = {
+    logo: "/logo.png",
+    ministry: "Digital Economy & E-Government",
+    description: "The Imo State Ministry of Digital Economy And E-Government (IMDEEG) was created by the administration of His Excellency, Distinguished Senator Hope Uzodinma: the Governor of Imo State to facilitate the transformation of Imo State ",
+    quickLinks: [
         {
             label: "Projects",
-            href: "/"
+            href: "/" 
         },
         {
             label: "News",
             href: "/news"
         },
         {
-            label: "Units",
+            label: "Units",     
             href: "/units"
         },
         {
@@ -30,68 +27,75 @@ export default function Footer({logo, ministry, description}: FooterProps) {
             href: "/media"
         },
         {
-            label: "Contact Us",
+            label: "Contact Us",        
             href: "/contact-us"
         },
-    ]
-    const newsletter = [
+    ],
+    newsletter: [
         {
-            label: "Signup to Our Newsletter",
+            label: "Signup to Our Newsletter",          
             href: "/"
         },
         {
             label: "Subscribe",
             href: "/"
         },
-    ]
-    const contact = [
+    ],
+    contact: [
+        {
+            label: "+2349130270514",
+            href: "/"
+        },
         {
             label: "Info@imdeeg.im.gov.ng",
             href: "/"
-        },
+        },  
         {
             label: "28 Egbu Road, Owerri, Imo State",
             href: "/"
         },
     ]
+}
+
+export default function Footer() {
     return (
         <footer className="w-full bg-white pt-10 px-18">
             <div className="mx-auto px-4 flex flex-col md:flex-row justify-between gap-8 pb-8">
                 {/* Logo and Description */}
                 <div className="flex-1 flex flex-col gap-3">
                 <div className="flex items-center gap-3 mb-2">
-                    <Image src={logo} alt="Imo State Logo" width={40} height={40} />
+                    <Image src={info.logo} alt="Imo State Logo" width={40} height={40} />
                     <span className="font-semibold text-sm text-gray-900 leading-tight">
                     Imo State Ministry<br />
-                    of {ministry}
+                    of {info.ministry}
                     </span>
                 </div>
                 <p className="text-xs text-gray-600 max-w-xs">
-                    {description}
+                    {info.description}
                 </p>
                 </div>
                 {/* Quick Links */}
                 <div className="flex-1">
                 <h4 className="font-semibold text-gray-900 mb-3">Quick Links</h4>
                 <div className="flex flex-col flex-wrap gap-x-4 gap-y-2 text-sm text-gray-700">
-                    {quickLinks.map((link) => (
+                    {info.quickLinks.map((link) => (
                         <Link href={link.href} className="hover:underline" key={link.label}>{link.label}</Link>
                     ))}
                 </div>
                 </div>
                 {/* Newsletter and Contact */}
                 <div className="flex-1">
-                <h4 className="font-semibold text-gray-900 mb-3">{newsletter[0].label}</h4>
+                <h4 className="font-semibold text-gray-900 mb-3">{info.newsletter[0].label}</h4>
                 <form className="flex mb-3">
                     <input
                     type="email"
                     placeholder="Myemail@gmail.com"
                     className="border border-gray-300 rounded-l px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
                     />
-                    <button type="submit" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-r text-sm font-medium">{newsletter[1].label}</button>
+                    <button type="submit" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-r text-sm font-medium">{info.newsletter[1].label}</button>
                 </form>
-                <div className="text-xs text-gray-700 space-y-1">
-                    {contact.map((item) => (
+                <div className="text-xs text-gray-700 space-y-1 flex flex-col">
+                    {info.contact.map((item) => (
                         <Link href={item.href} key={item.label}>{item.label}</Link>
                     ))}
                 </div>
