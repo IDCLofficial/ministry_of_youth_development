@@ -17,7 +17,7 @@ export default function Home() {
     <div className="h-screen">
       <Hero
         title="Imo State Ministry of Digital Economy and eGovernment" 
-        caption="Driving Imo’s Future with Innovation & Digital Power." 
+        caption="Driving Imo&apos;s Future with Innovation & Digital Power." 
         subtitle="The Imo State Ministry of Digital Economy and E-Government is committed to accelerating digital transformation across the state. We build a digitally empowered Imo through inclusive innovation, cutting-edge technology, and people-centered digital governance." 
       />
       <AboutSection 

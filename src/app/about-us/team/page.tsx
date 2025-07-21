@@ -10,7 +10,7 @@ const commissionerDescription = `Before his appointment, Dr. Amadi served at the
 
 const initiatives = [
   "SkillUpImo Project: This flagship program has trained thousands of young people in digital skills, providing them with tools like laptops and smartphones to kickstart their tech careers. The initiative has positioned Imo State as a leading digital skills hub in Nigeria.",
-  "Broadband Expansion: Under Dr. Amadi's leadership, efforts have been made to enhance broadband penetration across all local government areas in Imo State, ensuring that even underserved and unserved communities have access to quality telecommunication services.",
+  "Broadband Expansion: Under Dr. Amadi&apos;s leadership, efforts have been made to enhance broadband penetration across all local government areas in Imo State, ensuring that even underserved and unserved communities have access to quality telecommunication services.",
   "Collaboration with Federal Initiatives: The Ministry has partnered with federal programs like the Three Million Technical Talent (3MTT) initiative to further empower youths with digital skills, aiming to position Nigeria as a net exporter of tech talent."
 ];
 

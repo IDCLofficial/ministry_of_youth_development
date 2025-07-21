@@ -11,7 +11,7 @@ export default function AboutUs() {
         <div className="h-screen">
             <AboutUsHero ministryName="Ministry of Digital Economy E-Government" />
             <AboutSection 
-                aboutText="Established in 2022, the Imo State Ministry of Digital Economy and E-Government (IMDEEG) is responsible for implementing and managing the state's digital economy strategies. From enhancing public service delivery to building digital literacy, our goal is to transform Imo into a leading digital hub in Nigeria." 
+                aboutText="Established in 2022, the Imo State Ministry of Digital Economy and E-Government (IMDEEG) is responsible for implementing and managing the state&apos;s digital economy strategies. From enhancing public service delivery to building digital literacy, our goal is to transform Imo into a leading digital hub in Nigeria." 
                 imgSrc="/images/aboutUs1.png" 
                 altText="Ministry of Digital Economy and E-Government conference event" 
             />

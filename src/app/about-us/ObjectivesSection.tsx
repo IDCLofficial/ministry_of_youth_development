@@ -2,7 +2,7 @@ export const ObjectivesSection = () => {
     const objectives = [
         {
             title: "Promote Digital Literacy",
-            description: "Train citizens with the digital skills needed in today's economy."
+            description: "Train citizens with the digital skills needed in today&apos;s economy."
         },
         {
             title: "Enhance E-Governance",

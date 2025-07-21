@@ -3,7 +3,7 @@ import Image from "next/image";
 const links = [
   {
     title: "Projects",
-    desc: "See how we're digitally transforming Imo.",
+    desc: "See how we&apos;re digitally transforming Imo.",
     img: "/images/homeImage1.png",
     href: "/projects"
   },
