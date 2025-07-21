@@ -1,18 +1,33 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
+const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about-us" },
+    { label: "Projects", href: "/projects" },
+    { label: "News", href: "/news" },
+    { label: "Units", href: "/units" },
+    { label: "Events", href: "/events" },
+    { label: "Media", href: "/media" },
+    { label: "Contact Us", href: "/contact-us" }
+];
+
 const NavLinks = () => {
+    const pathname = usePathname();
+    console.log(pathname.split("/")[1]);
     return (
         <nav>
             <ul className="flex items-center gap-6 list-none p-0 m-0">                
-                <li><Link href="/" className="text-white hover:text-tertiary-green transition-colors duration-200">Home</Link></li>
-                <li><Link href="/about-us" className="text-white hover:text-tertiary-green transition-colors duration-200">About Us</Link></li>
-                <li><Link href="/projects" className="text-white hover:text-tertiary-green transition-colors duration-200">Projects</Link></li>
-                <li><Link href="/news" className="text-white hover:text-tertiary-green transition-colors duration-200">News</Link></li>
-                <li><Link href="/units" className="text-white hover:text-tertiary-green transition-colors duration-200">Units</Link></li>
-                <li><Link href="/events" className="text-white hover:text-tertiary-green transition-colors duration-200">Events</Link></li>
-                <li><Link href="/media" className="text-white hover:text-tertiary-green transition-colors duration-200">Media</Link></li>
-                <li><Link href="/contact-us" className="text-white hover:text-tertiary-green transition-colors duration-200">Contact Us</Link></li>
+                {navLinks.map((link) => (
+                    <li key={link.label}>
+                        <Link href={link.href} className={`hover:text-tertiary-green transition-colors duration-200 ${pathname.split("/")[1] === link.href.split("/")[1] ? "text-tertiary-green" : "text-white "}`}>
+                            {link.label}
+                        </Link>
+                    </li>
+                ))}
             </ul>
         </nav>
     );

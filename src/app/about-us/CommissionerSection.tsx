@@ -39,7 +39,7 @@ export const CommissionerSection = ({ imgSrc, altText, commissionerName, commiss
                         <p className="text-dark-primary-body text-[1rem] leading-relaxed text-justify">
                             {commissionerDescription}
                         </p>
-                        <AppLink label="Learn More" href="/about-us" variant="primary"/>
+                        <AppLink label="Learn More" href="/about-us/team" variant="primary"/>
                     </div>
                 </div>
             </div>
