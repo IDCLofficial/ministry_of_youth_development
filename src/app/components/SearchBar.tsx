@@ -1,6 +1,6 @@
 import { LuSearch } from "react-icons/lu";
 
-export default function NewsSearchBar() {
+export default function SearchBar({placeholder}:any) {
   return (
     <div className="flex justify-center py-8 w-[50%]">
       <form className="flex w-full max-w-2xl">
@@ -8,7 +8,7 @@ export default function NewsSearchBar() {
           <LuSearch className="text-gray-500 text-[18px] cursor-pointer" />
           <input
             type="text"
-            placeholder="Search"
+            placeholder={placeholder}
             className="flex-1 px-4 py-2 focus:outline-none text-[12px] bg-transparent"
           />
           <button

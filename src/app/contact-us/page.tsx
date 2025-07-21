@@ -12,10 +12,10 @@ export default function ContactUsPage() {
       <ContactHeroSection title="Contact Us" />
       <section className="w-full mx-auto py-20 px-12 flex flex-col gap-10">
         <div className="flex flex-col md:flex-row gap-8 relative">    
-            <div className="flex-1">
+            <div className="w-[50%]">
               <ContactInfoSection />
             </div>
-            <div className="flex-1 flex justify-center items-start absolute right-0 z-5">
+            <div className="w-[40%] flex justify-center items-start absolute right-0 z-5">
               <ContactFormSection />
             </div>
         </div>

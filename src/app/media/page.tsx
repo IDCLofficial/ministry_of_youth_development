@@ -1,8 +1,8 @@
 import React from "react";
 import MediaHeroSection from "./MediaHeroSection";
 import MediaGalleryGrid from "./MediaGalleryGrid";
-import MediaCTASection from "./MediaCTASection";
 import Footer from "../components/Footer";
+import CTASection from "../components/CTASection";
 
 const mediaItems = [
   {
@@ -63,7 +63,12 @@ export default function MediaPage() {
       <section className="w-full max-w-7xl mx-auto py-12 px-4">
         <MediaGalleryGrid items={mediaItems} />
       </section>
-      <MediaCTASection />
+      <CTASection 
+        heading="Ready to Experience the New Imo?" 
+        subtext="Discover our vision for an inclusive, empowered, and connected state." 
+        buttonLabel="Contact Us" 
+        buttonHref="/contact-us"
+      />
       <Footer />
     </main>
   );

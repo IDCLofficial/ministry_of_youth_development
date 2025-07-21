@@ -1,5 +1,5 @@
 import Image from "next/image";
-import NewsSearchBar from "./NewsSearchBar";
+import SearchBar from "../components/SearchBar";
 
 export default function NewsHeroSection() {
   return (
@@ -8,7 +8,9 @@ export default function NewsHeroSection() {
       <div className="absolute inset-0 bg-black/0 z-0"></div>
       <div className="relative z-10 flex flex-col items-center justify-end gap-4 w-full h-full">
         <h1 className="text-white text-[3rem] md:text-5xl font-bold text-center">Empowering Imo’s Digital Future</h1>
-        <NewsSearchBar />
+        <SearchBar
+          placeholder="Search"
+        />
       </div>
     </section>
   );
