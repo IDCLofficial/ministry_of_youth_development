@@ -27,12 +27,12 @@ const popularNews = [
 
 export default function NewsSidebar() {
   return (
-    <aside className="w-full md:w-64 flex-shrink-0">
+    <aside className="w-full md:w-64 flex-shrink-0 bg-[#F9F9F9] p-4">
       <div className="mb-8">
-        <h3 className="font-bold text-lg mb-4">CATEGORIES</h3>
+        <h3 className="font-medium text-[18px] mb-4">CATEGORIES</h3>
         <ul className="space-y-2">
           {categories.map((cat, idx) => (
-            <li key={idx} className="flex justify-between text-gray-700 text-sm">
+            <li key={idx} className="flex justify-between text-gray-700 text-[15px]">
               <span>{cat.name}</span>
               <span>{cat.count}</span>
             </li>
@@ -40,15 +40,15 @@ export default function NewsSidebar() {
         </ul>
       </div>
       <div>
-        <h3 className="font-bold text-lg mb-4">POPULAR NEWS</h3>
+        <h3 className="font-medium text-[18px] mb-4">POPULAR NEWS</h3>
         <ul className="space-y-4">
           {popularNews.map((news, idx) => (
             <li key={idx} className="flex gap-3 items-center">
-              <div className="w-14 h-14 relative rounded overflow-hidden">
-                <Image src={news.img} alt={news.title} fill className="object-cover" />
+              <div className="w-auto h-[50px] relative rounded overflow-hidden">
+                <Image src={news.img} alt={news.title} width={100} height={100} className="object-cover h-full" />
               </div>
               <div>
-                <div className="text-xs font-semibold leading-tight line-clamp-2">{news.title}</div>
+                <div className="text-[14px] font-medium leading-tight line-clamp-2">{news.title}</div>
                 <div className="text-[10px] text-gray-500 mt-1">{news.date}</div>
               </div>
             </li>
