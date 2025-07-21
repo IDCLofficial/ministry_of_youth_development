@@ -8,7 +8,7 @@ type AppLinkProps = {
   className?: string;
 };
 
-export const AppLink = ({ label, href, variant, size, className }: AppLinkProps) => {
+export const AppLink: React.FC<AppLinkProps> = ({ label, href, variant, size, className }) => {
     return(
         <Link
             href={href}

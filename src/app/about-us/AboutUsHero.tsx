@@ -6,7 +6,7 @@ interface AboutUsHeroProps {
 
 export const AboutUsHero = ({ ministryName }: AboutUsHeroProps) => {
     return (
-        <div className="relative h-[85vh] px-[3rem] py-10 flex flex-col justify-center bg-gradient-to-r from-green-900/20 via-black to-black">
+        <div className="relative h-[400px] px-[3rem] py-10 flex flex-col justify-center bg-gradient-to-r from-green-900/20 via-black to-black">
             <div className="absolute inset-0 bg-[url('/images/gradient.png')] bg-cover bg-center z-0"></div>
             
             {/* Navigation Highlight */}

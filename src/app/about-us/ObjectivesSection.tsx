@@ -33,7 +33,7 @@ export const ObjectivesSection = () => {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {objectives.map((objective, index) => (
-                            <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
+                            <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
                                 <h3 className="font-medium text-[22px] mb-3">
                                     {objective.title}
                                 </h3>
@@ -52,14 +52,14 @@ export const ObjectivesSection = () => {
                     </h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
                         {coreValues.slice(0, 4).map((value, index) => (
-                            <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
+                            <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
                                 <span className="font-bold text-lg">{value}</span>
                             </div>
                         ))}
                     </div>
                     <div className="flex justify-center gap-6">
                         {coreValues.slice(4).map((value, index) => (
-                            <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center w-48">
+                            <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center w-48">
                                 <span className="font-bold text-lg">{value}</span>
                             </div>
                         ))}
