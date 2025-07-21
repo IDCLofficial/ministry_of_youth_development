@@ -29,7 +29,7 @@ export const ObjectivesSection = () => {
                 {/* IMDEEG's Objectives */}
                 <div className="mb-16">
                     <h2 className="text-[43px] font-medium text-center mb-12">
-                        IMDEEG's objectives
+                        IMDEEG&apos;s objectives
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {objectives.map((objective, index) => (

@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 export default function AboutUs() {
     return (
         <div className="h-screen">
-            <AboutUsHero ministryName="Ministry of Digital Economy &amp; E-Government" />
+            <AboutUsHero ministryName="Ministry of Digital Economy E-Government" />
             <AboutSection 
                 aboutText="Established in 2022, the Imo State Ministry of Digital Economy and E-Government (IMDEEG) is responsible for implementing and managing the state's digital economy strategies. From enhancing public service delivery to building digital literacy, our goal is to transform Imo into a leading digital hub in Nigeria." 
                 imgSrc="/images/aboutUs1.png" 
