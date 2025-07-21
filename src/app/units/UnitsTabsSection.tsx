@@ -44,7 +44,7 @@ export default function UnitsTabsSection() {
           {departments.map((dept, idx) => (
             <li key={dept.name}>
               <button
-                className={`w-full text-left px-4 py-2 rounded font-semibold border ${activeIdx === idx ? 'bg-green-600 text-white' : 'bg-white text-black border-transparent'} transition`}
+                className={`w-full text-left px-4 py-2 rounded border ${activeIdx === idx ? 'bg-green-600 text-white' : 'bg-white text-black border-transparent'} transition`}
                 onClick={() => setActiveIdx(idx)}
               >
                 {dept.name}
@@ -55,11 +55,11 @@ export default function UnitsTabsSection() {
       </div>
       {/* Content */}
       <div className="flex-1">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">{active.name}</h2>
+        <h2 className="text-2xl md:text-[43px] font-medium mb-4">{active.name}</h2>
         <div className="w-full max-w-xl mb-4">
           <Image src={active.image} alt={active.name} width={600} height={300} className="rounded-xl object-cover" />
         </div>
-        <p className="text-gray-700 text-sm md:text-base">{active.description}</p>
+        <p className="text-gray-700 text-sm md:text-[1rem] text-dark-primary-body">{active.description}</p>
       </div>
     </section>
   );
