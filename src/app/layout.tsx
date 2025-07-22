@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/app/components/Navbar";
+import PageTransitionWrapper from "@/app/components/PageTransitionWrapper";
 
 const satoshiFont = localFont({
   src: [
@@ -44,7 +45,9 @@ export default function RootLayout({
         className={`antialiased ${satoshiFont.className}`}
       >
         <Navbar />
-        {children}
+        <PageTransitionWrapper>
+          {children}
+        </PageTransitionWrapper>
       </body>
     </html>
   );

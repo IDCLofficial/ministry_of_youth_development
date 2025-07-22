@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const events = Array(5).fill({
   date: "JUNE 15, 2025",
@@ -28,7 +29,7 @@ export default function EventsListSection() {
                 <p className="text-dark-primary-body text-sm mb-2">{event.description}</p>
               </div>
               <div className="flex justify-end md:justify-center">
-                <button className="border border-primary-green text-primary-green text-[14px] px-4 py-2 rounded font-semibold hover:bg-green-50 transition">More Information</button>
+                <Link href={'/events/323'} className="border border-primary-green text-primary-green text-[14px] px-4 py-2 rounded font-semibold hover:bg-green-50 transition">More Information</Link>
               </div>
             </div>
           </div>
