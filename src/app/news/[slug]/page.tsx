@@ -3,6 +3,8 @@ import ReadySection from "../ReadySection";
 import Footer from "../../components/Footer";
 import NewsHeroSection from "./NewsHeroSection";
 import NewsBodySection from "./NewsBodySection";
+import CTASection from "@/app/components/CTASection";
+import SocialShareBar from "../SocialShareBar";
 
 const latestNews = [
   {
@@ -26,22 +28,18 @@ export default function NewsDetailPage() {
   return (
     <div className="min-h-screen bg-[#F7F9FA]">
       {/* Section 1: Hero + Body */}
-      <section className="relative w-full min-h-[600px] pb-[180px]"> {/* pb-[180px] ensures body does not overlap next section */}
-        <NewsHeroSection image="/images/homeImage1.png" />
+      <section className="relative w-full pb-[180px]"> {/* pb-[180px] ensures body does not overlap next section */}
+        <NewsHeroSection/>
         <NewsBodySection>
           {/* Title & Meta */}
+          <div className="relative z-10 w-full flex justify-center pb-2">
+            <div className="w-full max-w-3xl rounded-xl overflow-hidden shadow-lg">
+              <Image src={'/images/homeImage1.png'} alt="News Hero" width={900} height={400} className="object-cover w-full h-[260px] md:h-[320px]" />
+            </div>
+          </div>
           <div className="text-center">
             <h1 className="text-2xl md:text-3xl font-bold mb-2">Imo State Digitizes Public Services, Unveils New E-Government Portals</h1>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-gray-500 text-sm mb-6">
-              <span>MAY 30, 2025</span>
-              <span className="hidden md:inline">•</span>
-              <span>Share:</span>
-              <div className="flex gap-2">
-                <span className="inline-block w-5 h-5 bg-gray-200 rounded-full" />
-                <span className="inline-block w-5 h-5 bg-gray-200 rounded-full" />
-                <span className="inline-block w-5 h-5 bg-gray-200 rounded-full" />
-              </div>
-            </div>
+            <SocialShareBar date="May 30, 2025" />
           </div>
           {/* Main Content */}
           <div>
@@ -95,7 +93,7 @@ export default function NewsDetailPage() {
         </div>
       </div>
       {/* Section 3: Footer */}
-      <ReadySection />
+      <CTASection heading="Ready to Experience the New Imo?" subtext="Discover our vision for an inclusive, empowered, and connected state." buttonLabel="Contact Us" buttonHref="/contact-us"/>
       <Footer />
     </div>
   );

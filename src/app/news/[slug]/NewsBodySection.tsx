@@ -5,8 +5,8 @@ interface NewsBodySectionProps {
 }
 
 const NewsBodySection: React.FC<NewsBodySectionProps> = ({ children }) => (
-  <section className="absolute left-1/2 -translate-x-1/2 top-[220px] w-full max-w-3xl z-20">
-    <div className="bg-white rounded-xl shadow-lg p-8">
+  <section className="-mt-[150px] w-full mx-auto max-w-3xl z-20 relative">
+    <div className="bg-white mx-auto rounded-xl shadow-lg p-8">
       {children}
     </div>
   </section>
