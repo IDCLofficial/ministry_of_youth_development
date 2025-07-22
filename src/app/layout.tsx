@@ -1,8 +1,11 @@
-import type { Metadata } from "next";
+"use client";
+
 import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/app/components/Navbar";
 import PageTransitionWrapper from "@/app/components/PageTransitionWrapper";
+import Sidebar from "@/app/components/Sidebar";
+import { useState } from "react";
 
 const satoshiFont = localFont({
   src: [
@@ -29,22 +32,19 @@ const satoshiFont = localFont({
   ],
 });
 
-export const metadata: Metadata = {
-  title: "Ministry of Finance",
-  description: "Ministry of Finance",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <html lang="en">
       <body
         className={`antialiased ${satoshiFont.className}`}
       >
-        <Navbar />
+        <Navbar onOpenSidebar={() => setSidebarOpen(true)} />
+        <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         <PageTransitionWrapper>
           {children}
         </PageTransitionWrapper>

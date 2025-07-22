@@ -14,7 +14,7 @@ import Advertisement from "@/app/components/Advertisement";
 
 export default function Home() {
   return (
-    <div className="h-screen">
+    <div className="h-screen w-full bg-red-400">
       <Hero
         title="Imo State Ministry of Digital Economy and eGovernment" 
         caption="Driving Imo&apos;s Future with Innovation & Digital Power." 

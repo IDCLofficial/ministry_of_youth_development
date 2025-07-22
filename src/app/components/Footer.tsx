@@ -59,7 +59,7 @@ const info = {
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-white pt-10 px-18">
+        <footer className="w-full bg-white pt-10 px-4 lg:px-18">
             <div className="mx-auto px-4 flex flex-col md:flex-row justify-between gap-8 pb-8">
                 {/* Logo and Description */}
                 <div className="flex-1 flex flex-col gap-3">

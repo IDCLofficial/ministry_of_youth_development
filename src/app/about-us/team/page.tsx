@@ -37,7 +37,7 @@ export default function TeamPage() {
       />
       <TeamGridSection members={teamMembers} />
       <div className="w-full bg-dark-primary text-center py-8 px-4">
-        <p className="text-center text-[1rem] font-regular text-white w-[60%] mx-auto">
+        <p className="text-center text-[1rem] font-regular text-white w-[90%] lg:w-[60%] mx-auto">
             Dr. Amadi’s proactive approach and strategic initiatives have significantly contributed to the digital transformation of Imo State, fostering an environment conducive to innovation, entrepreneurship, and inclusive economic growth.
         </p>
       </div>

@@ -15,15 +15,23 @@ const navLinks = [
     { label: "Contact Us", href: "/contact-us" }
 ];
 
-const NavLinks = () => {
+interface NavLinksProps {
+    mobile?: boolean;
+    onClickLink?: () => void;
+}
+
+const NavLinks = ({ mobile = false, onClickLink }: NavLinksProps) => {
     const pathname = usePathname();
-    console.log(pathname.split("/")[1]);
     return (
         <nav>
-            <ul className="flex items-center gap-6 list-none p-0 m-0">                
+            <ul className={mobile ? "flex flex-col gap-6 mt-8" : "flex items-center gap-6 list-none p-0 m-0"}>
                 {navLinks.map((link) => (
                     <li key={link.label}>
-                        <Link href={link.href} className={`hover:text-tertiary-green transition-colors duration-200 ${pathname.split("/")[1] === link.href.split("/")[1] ? "text-tertiary-green" : "text-white "}`}>
+                        <Link
+                            href={link.href}
+                            className={`hover:text-tertiary-green transition-colors duration-200 ${pathname.split("/")[1] === link.href.split("/")[1] ? "text-tertiary-green" : mobile ? "text-white text-lg font-semibold" : "text-white "}`}
+                            onClick={onClickLink}
+                        >
                             {link.label}
                         </Link>
                     </li>
