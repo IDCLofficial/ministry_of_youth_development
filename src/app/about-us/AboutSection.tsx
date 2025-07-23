@@ -25,7 +25,7 @@ export const AboutSection = ({ aboutText, imgSrc, altText }: AboutSectionProps) 
                         <Image 
                             src={imgSrc}
                             alt={altText}                       
-                            className="object-cover absolute left-0 top-0 w-full h-full md:static md:w-auto md:h-auto"
+                            className="object-cover -ml-80 w-full h-full md:h-[400px]"
                             width={400}
                             height={400}
                             priority

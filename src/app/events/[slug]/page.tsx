@@ -1,53 +1,89 @@
+"use client";
+import { use } from "react";
 import Image from "next/image";
 import ReadySection from "../../news/ReadySection";
 import Footer from "../../components/Footer";
+import events from "../eventsList";
+import { useEffect, useState } from "react";
 
-const event = {
-  title: "Imo Digital Youth Summit 2025",
-  img: "/images/initiatives.png",
-  date: "30 May 2025",
-  time: "8:00 am - 5:00 pm",
-  organizer: "Imo Digital Limited",
-  phone: "0809 8892 900",
-  address: "Owerri Tech Innovation Hub",
-  description:
-    "Lorem ipsum dolor sit amet consectetur. Senectus a praesent nunc elit commodo ut maecenas volutpat sed. Orci purus a convallis consectetur sed morbi massa feugiat ipsum. Massa pellentesque a viverra molestie donec. Enim tincidunt commodo ac cursus. Tellus arcu et vel neque urna. In vestibulum tellus ullamcorper suspendisse et. Est habitant sollicitudin lacus lorem pellentesque ut. Pellentesque nibh ornare interdum blandit sagittis commodo. Elementum amet ipsum ac cras neque. Amet aliquam elementum amet eget ac leo sem pellentesque. Eget aliquam vestibulum accumsan nisi vitae commodo cras convallis. Mauris massa tellus sollicitudin volutpat sagittis scelerisque id est amet. Sit venenatis vitae ut libero aliquet.",
-};
+function Countdown({ eventDateTime }: { eventDateTime: string }) {
+  const [timeLeft, setTimeLeft] = useState<{days: number, hours: number, minutes: number, seconds: number} | null>(null);
+  const [ended, setEnded] = useState(false);
 
-const speakers = Array(4).fill({
-  name: "JAPHET GILBERT",
-  role: "Lead Speaker",
-  img: "/images/commissioner2.png",
-});
+  useEffect(() => {
+    function calculateTimeLeft() {
+      const target = new Date(eventDateTime).getTime();
+      const now = new Date().getTime();
+      const diff = target - now;
+      if (diff <= 0) {
+        setEnded(true);
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      setTimeLeft({ days, hours, minutes, seconds });
+    }
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+    return () => clearInterval(timer);
+  }, [eventDateTime]);
 
-function Countdown() {
-  // Static mockup for now
+  if (ended) {
+    return (
+      <div className="bg-gray-400 text-white rounded-lg px-8 py-4 flex items-center text-center w-max mt-4 mb-6 md:mb-0 md:absolute md:bottom-6 md:right-10 shadow-lg">
+        <span className="text-lg font-semibold">Event has ended.</span>
+      </div>
+    );
+  }
+  if (!timeLeft) return null;
   return (
     <div className="bg-green-700 text-white rounded-lg px-8 py-4 flex gap-6 items-center text-center w-max mt-4 mb-6 md:mb-0 md:absolute md:bottom-6 md:right-10 shadow-lg">
       <div>
-        <div className="text-2xl font-bold">12</div>
+        <div className="text-2xl font-bold">{timeLeft.days}</div>
         <div className="text-xs uppercase">Days</div>
       </div>
       <div className="text-2xl font-bold">:</div>
       <div>
-        <div className="text-2xl font-bold">54</div>
+        <div className="text-2xl font-bold">{timeLeft.hours}</div>
         <div className="text-xs uppercase">Hours</div>
       </div>
       <div className="text-2xl font-bold">:</div>
       <div>
-        <div className="text-2xl font-bold">36</div>
+        <div className="text-2xl font-bold">{timeLeft.minutes}</div>
         <div className="text-xs uppercase">Minutes</div>
       </div>
       <div className="text-2xl font-bold">:</div>
       <div>
-        <div className="text-2xl font-bold">48</div>
+        <div className="text-2xl font-bold">{timeLeft.seconds}</div>
         <div className="text-xs uppercase">Seconds</div>
       </div>
     </div>
   );
 }
 
-export default function EventDetailPage() {
+export default function EventDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params);
+  const event = events.find(e => e.slug === slug);
+  if (!event) {
+    return (
+      <div className="bg-white min-h-screen flex flex-col items-center justify-center">
+        <h1 className="text-2xl font-bold mb-4">Event Not Found</h1>
+        <p className="text-gray-600">Sorry, the event you are looking for does not exist.</p>
+      </div>
+    );
+  }
+
+  // Try to parse a full date+time string for countdown
+  // Fallback: just use event.date if event.time is missing
+  let eventDateTime = event.date;
+  if (event.time) {
+    // Try to parse a string like 'JUNE 15, 2025 8:00 am'
+    eventDateTime = `${event.date} ${event.time}`;
+  }
+
   return (
     <div className="bg-white">
       {/* Hero Title */}
@@ -64,21 +100,21 @@ export default function EventDetailPage() {
         </h1>
       </section>
       {/* Event Image & Countdown */}
-      <section className="relative w-full flex flex-col items-center pt-6 md:pt-12 pb-4 md:pb-6 px-4 md:px-8">
+      <section className="relative w-full flex flex-col items-center pt-6 md:pt-12 pb-4 md:pb-6 px-4 md:px-20">
         <div className="w-full relative">
           <Image
             src={event.img}
             alt={event.title}
             width={1920}
             height={600}
-            className="object-cover w-full h-[180px] md:h-[340px] rounded-none"
+            className="object-cover w-full h-[180px] md:h-[480px] rounded-none"
             priority
           />
           <div className="static md:absolute md:bottom-6 md:right-10 z-10 mt-4 md:mt-0 flex justify-center w-full">
-            <Countdown />
+            <Countdown eventDateTime={eventDateTime} />
           </div>
         </div>
-        <p className="text-gray-700 mt-6 mb-6 md:text-center max-w-3xl mx-auto text-sm md:text-base">
+        <p className="text-gray-700 mt-6 mb-6 md:left text-sm md:text-base">
           {event.description}
         </p>
       </section>
@@ -97,15 +133,15 @@ export default function EventDetailPage() {
       <section className="w-full max-w-6xl mx-auto px-4 mb-12 md:mb-16">
         <h2 className="text-lg md:text-2xl font-bold mb-4 md:mb-6">Speakers</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-          {speakers.map((sp, idx) => (
+          {(event.speakers && event.speakers.length > 0) ? event.speakers.map((sp, idx) => (
             <div key={idx} className="flex flex-col items-start bg-white rounded-xl shadow border border-gray-200 p-3 md:p-4">
-              <div className="w-full h-40 md:w-40 md:h-48 relative mb-2 md:mb-3 rounded-lg overflow-hidden">
+              <div className="w-full h-40 md:w-full md:h-48 relative mb-2 md:mb-3 rounded-lg overflow-hidden">
                 <Image src={sp.img} alt={sp.name} fill className="object-cover" />
               </div>
-              <span className="text-green-700 font-semibold text-xs md:text-sm mb-1">Lead Speaker</span>
-              <span className="font-bold text-base md:text-lg text-left">JAPHET GILBERT</span>
+              <span className="text-green-700 font-semibold text-xs md:text-sm mb-1">{sp.role}</span>
+              <span className="font-bold text-base md:text-lg text-left">{sp.name}</span>
             </div>
-          ))}
+          )) : <div className="text-gray-500 col-span-full">No speakers announced yet.</div>}
         </div>
       </section>
       <ReadySection />

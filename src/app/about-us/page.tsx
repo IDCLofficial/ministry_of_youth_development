@@ -9,24 +9,24 @@ import Footer from "../components/Footer";
 export default function AboutUs() {
     return (
         <div className="h-screen">
-            <AboutUsHero ministryName="Ministry of Digital Economy E-Government" />
+            <AboutUsHero ministryName="Ministry of Budget, Economic Planning & Statistics" />
             <AboutSection 
-                aboutText="Established in 2022, the Imo State Ministry of Digital Economy and E-Government (IMDEEG) is responsible for implementing and managing the state&apos;s digital economy strategies. From enhancing public service delivery to building digital literacy, our goal is to transform Imo into a leading digital hub in Nigeria." 
-                imgSrc="/images/aboutUs1.png" 
-                altText="Ministry of Digital Economy and E-Government conference event" 
+                aboutText="The Imo State Ministry of Budget, Economic Planning & Statistics is the driving force behind the state’s sustainable development and economic transformation. Our mission is to formulate transparent budgets, develop strategic economic plans, and provide reliable statistical data to guide policy decisions and resource allocation. We are committed to fostering inclusive growth, ensuring fiscal responsibility, and enhancing the quality of life for all citizens of Imo State. Through collaboration, innovation, and data-driven strategies, the ministry leads efforts to build a resilient economy, empower communities, and create opportunities for present and future generations."
+                imgSrc="/images/homeImage1.jpg" 
+                altText="Ministry of Budget, Economic Planning and Statistics conference event" 
             />
             <CommissionerSection 
-                imgSrc="/images/commissioner2.png" 
-                altText="Hon. Commissioner Dr. Chimezie Amadi" 
-                commissionerName="Dr. Chimezie Amadi" 
-                commissionerDescription="As Commissioner for Digital Economy and E-Government, Dr. Chimezie Amadi is a seasoned leader and policy advocate dedicated to bridging the digital divide. Under his direction, IMDEEG has empowered thousands of citizens through tech training and expanded digital services across Imo State."
+                imgSrc="/images/commissioner2.jpg" 
+                altText="Dr. (Rt. Hon.) C.C. Osuala" 
+                commissionerName="Dr. (Rt. Hon.) C.C. Osuala" 
+                commissionerDescription="As Commissioner for Budget, Economic Planning & Statistics, Dr. (Rt. Hon.) C.C. Osuala is a seasoned leader and policy advocate dedicated to fostering sustainable economic growth and development in Imo State."
             />     
             <ObjectivesSection />
             <StructuresSection 
                 imgSrc="/images/building.png"
             />
             <CTASection 
-                heading="Join our mission to make Imo the digital heart of Nigeria"
+                heading="Be part of Imo’s transformation with MBEPS"
                 buttonLabel="See Our Projects"
                 buttonHref="/projects"
             />

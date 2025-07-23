@@ -4,31 +4,68 @@ import { useState } from "react";
 import Image from "next/image";
 
 const departments = [
+  // Departments
   {
-    name: "IT Strategy & Partnership",
+    name: "Department of Budget",
     image: "/images/aboutUs1.png",
-    description:
-      "Hardware, Software, Database: Responsible for sourcing, recommending, deploying, administering and monitoring all technical tools and infrastructure including but not limited to hardware and software systems, databases, custom-built software, payment systems/gateways, email systems, websites, storage systems amongst others. Provide technical support for all staff.",
+    description: "Responsible for the preparation, coordination, and monitoring of the state budget, ensuring alignment with government priorities and fiscal discipline.",
   },
   {
-    name: "Knowledge Management",
+    name: "Department of Economic Planning",
     image: "/images/aboutUs1.png",
-    description: "Knowledge Management department description goes here.",
+    description: "Oversees the formulation and implementation of economic development plans and policies to drive sustainable growth in Imo State.",
   },
   {
-    name: "E-Government",
+    name: "Department of Project Monitoring and Evaluation",
     image: "/images/aboutUs1.png",
-    description: "E-Government department description goes here.",
+    description: "Monitors and evaluates government projects to ensure effective delivery, transparency, and value for money.",
   },
   {
-    name: "IT Infrastructure & Data Centers",
+    name: "Department of Research and Statistics",
     image: "/images/aboutUs1.png",
-    description: "IT Infrastructure & Data Centers department description goes here.",
+    description: "Conducts research and manages statistical data to support evidence-based policy making and planning.",
   },
   {
-    name: "Cyber Security & Data Protection",
+    name: "Department of Administration and Finance",
     image: "/images/aboutUs1.png",
-    description: "Cyber Security & Data Protection department description goes here.",
+    description: "Handles administrative services and financial management for the ministry, ensuring efficient operations and resource allocation.",
+  },
+  {
+    name: "Department of Development Cooperation and Donor Coordination",
+    image: "/images/aboutUs1.png",
+    description: "Coordinates development cooperation initiatives and manages relationships with donor agencies to maximize support for state projects.",
+  },
+  // Units & Specialized Programmes
+  {
+    name: "Digital Planning and Innovation Unit",
+    image: "/images/aboutUs1.png",
+    description: "Drives digital transformation and innovative planning solutions within the ministry.",
+  },
+  {
+    name: "State Integrated Financial Management Information System (SIFMIS) Unit",
+    image: "/images/aboutUs1.png",
+    description: "Implements and manages the SIFMIS platform to enhance financial transparency and efficiency.",
+  },
+  {
+    name: "Climate Resilience and Sustainability Desk",
+    image: "/images/aboutUs1.png",
+    description: "Focuses on integrating climate resilience and sustainability into state planning and projects.",
+  },
+  {
+    name: "Public Investment Management Unit",
+    image: "/images/aboutUs1.png",
+    description: "Oversees the planning, appraisal, and management of public investments for optimal impact.",
+  },
+  {
+    name: "State Data Coordination Office",
+    image: "/images/aboutUs1.png",
+    description: "Coordinates data management and sharing across state agencies to support informed decision-making.",
+  },
+  // Parastatals and Agencies
+  {
+    name: "Imo State Bureau of Statistics",
+    image: "/images/aboutUs1.png",
+    description: "The official agency responsible for collecting, analyzing, and disseminating statistical data for Imo State.",
   },
 ];
 
@@ -55,7 +92,7 @@ export default function UnitsTabsSection() {
       </div>
       {/* Content */}
       <div className="flex-1">
-        <h2 className="text-2xl md:text-[43px] font-medium mb-4">{active.name}</h2>
+        <h2 className="text-2xl md:text-4xl font-medium mb-4">{active.name}</h2>
         <div className="w-full max-w-xl mb-4">
           <Image src={active.image} alt={active.name} width={600} height={300} className="rounded-xl object-cover" />
         </div>

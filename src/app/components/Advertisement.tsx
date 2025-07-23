@@ -13,7 +13,7 @@ const advert = {
 
 export default function Advertisement() {
   return (
-    <section className="w-full px-4 md:px-8 py-8 md:py-12 mt-10 md:mt-28 bg-white flex flex-col md:flex-row justify-between items-center gap-8 md:gap-18">
+    <section className="w-full px-4 md:px-8 py-8 md:py-12 bg-white flex flex-col md:flex-row justify-between items-center gap-8 md:gap-18">
       {/* Flier Image */}
       <div className="w-full md:w-[500px] border border-[#7d7dbb] bg-[#d6f5d6] rounded-sm flex-shrink-0 flex justify-center">
         <div className="relative w-full h-[180px] md:h-[260px] md:w-[500px]">

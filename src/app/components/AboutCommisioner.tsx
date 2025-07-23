@@ -11,13 +11,13 @@ export default function AboutCommisioner({imgSrc, title}: AboutCommisionerProps)
     <section className="w-full bg-[#f3f8fa] py-12 md:py-20 flex justify-center">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-18 w-full px-4 md:px-[3rem]">
             {/* Left: Commissioner Image */}
-            <div className="bg-white rounded-xl shadow-lg p-2 flex-shrink-0 w-full md:w-auto flex justify-center">
-                <div className="relative w-[220px] h-[240px] md:w-[300px] md:h-[340px] lg:w-[500px] lg:h-[360px]">
+            <div className="bg-white rounded-xl shadow-lg flex-shrink-0 w-full md:w-auto flex justify-center">
+                <div className="relative w-full h-[240px] md:w-[300px] md:h-[340px] lg:w-[500px] lg:h-[360px]">
                     <Image
                     src={imgSrc}
                     alt="Commissioner"
                     fill
-                    className="object-contain rounded-xl"
+                    className="object-cover object-center rounded-xl"
                     sizes="(max-width: 768px) 220px, 320px"
                     />
                 </div>
@@ -26,10 +26,14 @@ export default function AboutCommisioner({imgSrc, title}: AboutCommisionerProps)
             <div className="flex-1 w-full md:w-auto mt-6 md:mt-0">
                 <h2 className="text-xl md:text-2xl lg:text-[43px] font-bold text-dark-primary mb-4">{title}</h2>
                 <p className="text-dark-primary-body text-sm md:text-base mb-4">
-                    Dr. Chimezie Paulinus Amadi is the Commissioner for Digital Economy and E-Government in Imo State, Nigeria. Appointed by Governor Hope Uzodimma, he formerly worked with the Nigerian Communications Commission (NCC). He leads the Digital Imo Agenda (IDEA 2022–2026), which focuses on digital skills, infrastructure, advocacy, and partnerships.
+                    Dr. (Rt. Hon.) C.C. Osuala is a distinguished technocrat and scholar with a remarkable blend of academic excellence, international experience, and public service. With three doctorate degrees in General Engineering, 
+                    Engineering Sciences, and Management from top U.S. universities, as well as a Bachelor’s degree in Law, Dr. Osuala brings a unique perspective to governance and economic planning.
                 </p>
                 <p className="text-dark-primary-body text-sm md:text-base mb-6 text-justify">
-                    He launched SkillUpImo, aiming to train 100,000 youths in tech skills like software development and blockchain. His work promotes smart cities, digital governance, and youth empowerment. Dr. Amadi has received awards for leadership and innovation in public service.
+                    His vision for the Ministry of Budget, Economic Planning & Statistics is rooted in transparency, inclusivity, and innovation. Dr. Osuala is committed to making Imo State’s budgeting process open and accessible, exemplified by his introduction 
+                    of the state’s first Citizens’ Budget—also translated into Igbo to ensure no one is left behind. He believes in participatory governance, regularly engaging all 655 autonomous communities, civil society, and youth groups to shape budget priorities that reflect the true needs of Imo people.
+                    Under his leadership, the ministry has achieved unprecedented budget transparency, earning international recognition and securing significant World Bank grants that have fueled capital projects and improved revenue generation.
+                    Dr. Osuala’s goal is to institutionalize citizen-driven budgeting, foster sustainable economic growth, and ensure that Imo State’s development is both inclusive and measurable. His unwavering dedication continues to position the ministry as a model for fiscal responsibility and community empowerment in Nigeria.
                 </p>
                 <AppLink href="/about-us" label="Our Team" variant="primary" className="border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] font-medium"/>
             </div>

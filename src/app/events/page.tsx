@@ -9,8 +9,8 @@ export default function EventsPage() {
       <EventsHeroSection />
       <EventsListSection />
       <CTASection 
-        heading="Ready to Experience the New Imo?" 
-        subtext="Discover our vision for an inclusive, empowered, and connected state." 
+        heading="Partnering for a Prosperous Imo"
+        subtext="Join us in shaping a transparent, data-driven, and sustainable future for all through effective budgeting and strategic economic planning."
         buttonLabel="Contact Us" 
         buttonHref="/contact-us"
       />

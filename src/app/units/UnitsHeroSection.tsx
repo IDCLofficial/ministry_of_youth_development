@@ -6,7 +6,7 @@ export default function UnitsHeroSection() {
       <div className="absolute inset-0 bg-[url('/images/gradient.png')] bg-cover bg-center opacity-60" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full">
         <Title label="Departments"/>
-        <h1 className="text-white text-3xl md:text-5xl font-bold text-center leading-tight">Departments Driving Our Digital Vision</h1>
+        <h1 className="text-white text-3xl md:text-5xl font-bold text-center leading-tight">Departments Driving Our Vision</h1>
       </div>
     </section>
   );

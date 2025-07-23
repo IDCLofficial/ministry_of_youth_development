@@ -6,28 +6,28 @@ interface StructuresSectionProps {
 
 export const StructuresSection = ({imgSrc}: StructuresSectionProps) => {
     const departments = {
-        row1 : [
+        row1: [
             {
-                title: "IT Strategy & Partnerships",
-                description: "Aligning technology goals with business growth through strategic collaboration."
+                title: "Budget Department",
+                description: "Prepares and manages the state’s budget."
             },
             {
-                title: "Knowledge Management",
-                description: "Capturing, organizing, and sharing information to drive smarter decisions."
+                title: "Planning Department",
+                description: "Develops medium to long-term development plans."
             },
             {
-                title: "E-Government",
-                description: "Digitizing government services for improved accessibility and efficiency."
+                title: "Monitoring & Evaluation (M&E)",
+                description: "Tracks implementation and evaluates performance."
             },
         ],
         row2: [
             {
-                title: "IT Infrastructure & Data Centers",
-                description: "Building robust, scalable systems for reliable IT operations."
+                title: "International Cooperation",
+                description: "Liaises with donor agencies and international development partners."
             },
             {
-                title: "Cyber Security & Data Protection",
-                description: "Safeguarding digital assets and ensuring data privacy."
+                title: "Statistics Department",
+                description: "Collects, analyzes, and disseminates statistical data to inform policy and planning."
             },
         ]
     }

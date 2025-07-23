@@ -1,26 +1,37 @@
 export const ObjectivesSection = () => {
     const objectives = [
         {
-            title: "Promote Digital Literacy",
-            description: "Train citizens with the digital skills needed in today&apos;s economy."
+            title: "Guide Inclusive Growth",
+            description: "Promote equitable and inclusive economic growth across Imo State by ensuring that development initiatives benefit all communities and demographics."
         },
         {
-            title: "Enhance E-Governance",
-            description: "Digitize public services for greater transparency and efficiency."
+            title: "Enable Data-Driven Decision Making",
+            description: "Collect, analyze, and disseminate reliable statistical data to inform government policies, resource allocation, and strategic planning."
         },
         {
-            title: "Foster Innovation & Entrepreneurship",
-            description: "Support startups and tech-driven ventures through policy and infrastructure."
+            title: "Coordinate Development Planning",
+            description: "Lead the formulation and implementation of coordinated development plans that align with the state’s long-term vision and priorities."
+        },
+        {
+            title: "Ensure Transparent and Accountable Budgeting",
+            description: "Develop and manage annual budgets with a focus on transparency, fiscal responsibility, and optimal use of public resources."
+        },
+        {
+            title: "Foster Sustainable Economic Development",
+            description: "Design and execute strategies that support sustainable economic growth, job creation, and improved quality of life for Imo State residents."
+        },
+        {
+            title: "Strengthen Stakeholder Collaboration",
+            description: "Engage with government agencies, private sector, civil society, and development partners to achieve shared economic and social objectives."
         }
     ];
 
     const coreValues = [
-        "Teamwork",
-        "Innovation", 
         "Integrity",
-        "Professionalism",
-        "Excellency",
-        "Commitment"
+        "Efficiency",
+        "Collaboration",
+        "Innovation",
+        "Inclusiveness"
     ];
 
     return (
@@ -53,7 +64,7 @@ export const ObjectivesSection = () => {
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 mb-4 md:mb-6">
                         {coreValues.map((value, index) => (
                             <div key={index} className="bg-white p-4 md:p-6 rounded-lg shadow-md border border-gray-200 text-center w-full">
-                                <span className="font-bold text-base md:text-lg">{value}</span>
+                                <span className="font-medium text-base md:text-lg text-dark-primary-body">{value}</span>
                             </div>
                         ))}
                     </div>

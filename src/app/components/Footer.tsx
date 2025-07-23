@@ -4,7 +4,7 @@ import Link from "next/link";
 const info = {
     logo: "/logo.png",
     ministry: "Digital Economy & E-Government",
-    description: "The Imo State Ministry of Digital Economy And E-Government (IMDEEG) was created by the administration of His Excellency, Distinguished Senator Hope Uzodinma: the Governor of Imo State to facilitate the transformation of Imo State ",
+    description: "The Imo State Ministry of Budget, Economic Planning & Statistics is dedicated to driving sustainable development and inclusive growth in Imo State. The ministry leads the formulation of transparent budgets, strategic economic plans, and reliable statistical data to guide policy decisions, ensure fiscal responsibility, and improve the quality of life for all citizens.",
     quickLinks: [
         {
             label: "Projects",

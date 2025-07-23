@@ -3,22 +3,22 @@ import { AppLink } from "./AppLink";
 
 const news = [
   {
-    title: "SKILLUP IMO COHORT 5 GRADUATION CEREMONY COMPLETED",
-    desc: "Over 5,000 trained in cybersecurity, UI/UX, AI — May 2025",
-    date: "30th May 2025",
-    img: "/images/homeImage1.png"
+    title: "2024 Imo State Budget Signed into Law",
+    desc: "Governor Hope Uzodimma signs the 2024 Appropriation Bill, focusing on infrastructure, education, and economic growth.",
+    date: "15th January 2024",
+    img: "/images/homeImage1.jpg"
   },
   {
-    title: "SKILLUP IMO COHORT 5 GRADUATION CEREMONY COMPLETED",
-    desc: "Over 5,000 trained in cybersecurity, UI/UX, AI — May 2025",
-    date: "30th May 2025",
-    img: "/images/homeImage1.png"
+    title: "Imo State Launches Citizens’ Budget Portal",
+    desc: "The Ministry unveils a new online portal to promote transparency and public participation in the budgeting process.",
+    date: "2nd March 2024",
+    img: "/images/homeImage2.jpg"
   },
   {
-    title: "SKILLUP IMO COHORT 5 GRADUATION CEREMONY COMPLETED",
-    desc: "Over 5,000 trained in cybersecurity, UI/UX, AI — May 2025",
-    date: "30th May 2025",
-    img: "/images/homeImage1.png"
+    title: "World Bank Commends Imo for Fiscal Transparency",
+    desc: "Imo State receives recognition from the World Bank for outstanding performance in budget transparency and accountability.",
+    date: "10th April 2024",
+    img: "/images/homeImage3.jpg"
   },
 ];
 

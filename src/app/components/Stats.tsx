@@ -4,20 +4,24 @@ import { useEffect, useState, useRef } from "react";
 
 const stats = [
   {
-    value: "+25,000",
-    desc: "Youths Trained Under SkillUp Imo",
+    value: "₦474B+",
+    desc: "2025 State Budget Size",
   },
   {
-    value: "14",
-    desc: "Digital Projects Launched in 3 Years",
+    value: "655",
+    desc: "Autonomous Communities Engaged",
   },
   {
-    value: "4,000+",
-    desc: "Devices Distributed to Students",
+    value: "5",
+    desc: "World Bank Grants Secured",
   },
   {
-    value: "100%",
-    desc: "Growth in e-Government Service Uptake",
+    value: "100+",
+    desc: "Public Projects Monitored Annually",
+  },
+  {
+    value: "20+",
+    desc: "Data-Driven Policies Implemented",
   },
 ];
 

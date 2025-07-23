@@ -16,15 +16,15 @@ export default function Home() {
   return (
     <div className="h-screen w-full bg-red-400">
       <Hero
-        title="Imo State Ministry of Digital Economy and eGovernment" 
-        caption="Driving Imo&apos;s Future with Innovation & Digital Power." 
-        subtitle="The Imo State Ministry of Digital Economy and E-Government is committed to accelerating digital transformation across the state. We build a digitally empowered Imo through inclusive innovation, cutting-edge technology, and people-centered digital governance." 
+        title="Imo State Ministry of Budget, Economic Planning & Statistics" 
+        caption="Empowering Imo’s Growth Through Strategic Planning and Sustainable Development." 
+        subtitle="TThe Ministry of Budget, Economic Planning, and Statistics serves as the economic backbone of Imo State, guiding inclusive growth, data-driven decisions, and coordinated development planning." 
       />
       <AboutSection 
         title="About Us"
-        subtitle="Established in 2022, the Imo State Ministry of Digital Economy and E-Government (IMDEEG) is committed to accelerating digital transformation across the state. We build a digitally empowered Imo through inclusive innovation, cutting-edge technology, and people-centered digital governance."
-        image1="/images/homeImage1.png"
-        image2="/images/homeImage2.png"
+        subtitle="The Imo State Ministry of Budget, Economic Planning, and Statistics is committed to providing a transparent and effective budgeting system while strengthening economic planning and data reliability across the state."
+        image1="/images/homeImage1.jpg"
+        image2="/images/homeImage2.jpg"
       />
       <AboutCommisioner 
         imgSrc="/images/commissioner.png" 
@@ -32,14 +32,14 @@ export default function Home() {
       />
       <section className="w-full flex flex-col gap-8">
         <QuickLinks />
-        <Advertisement />
+        {/* <Advertisement /> */}
         <LatestNews />
       </section>
       <Stats />
-      <FeaturedPartners />
+      {/* <FeaturedPartners /> */}
       <CTASection 
-        heading="Ready to Experience the New Imo?"
-        subtext="Discover our vision for an inclusive, empowered, and connected state."
+        heading="Partnering for a Prosperous Imo"
+        subtext="Join us in shaping a transparent, data-driven, and sustainable future for all through effective budgeting and strategic economic planning."
         buttonLabel="Contact Us"
         buttonHref="/contact-us"
       />

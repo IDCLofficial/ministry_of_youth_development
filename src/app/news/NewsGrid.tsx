@@ -1,14 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
 import NewsCard from "./NewsCard";
-
-const newsList = Array(6).fill({
-  title: "IMO STATE DIGITIZES PUBLIC SERVICES, UNVEILS NEW E-GOVERNMENT PORTALS",
-  date: "MAY 30, 2025",
-  img: "/images/homeImage1.png",
-  badge: "Top News",
-  desc: "From tax payments to public records, the new digital system offers citizens faster, easier access to essential se..."
-});
+import newsList from "./newsList";
 
 export default function NewsGrid({params}:any) {
   return (

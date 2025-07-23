@@ -2,22 +2,22 @@ import Image from "next/image";
 
 const links = [
   {
+    title: "Services",
+    desc: "Explore our comprehensive range of services.",
+    img: "/images/homeImage1.jpg",
+    href: "/services"
+  },
+  {
     title: "Projects",
-    desc: "See how we&apos;re digitally transforming Imo.",
-    img: "/images/homeImage1.png",
+    desc: "Discover our impactful initiatives.",
+    img: "/images/homeImage2.jpg",
     href: "/projects"
   },
   {
-    title: "Events",
-    desc: "Join upcoming tech summits & training programs.",
-    img: "/images/homeImage2.png",
-    href: "/events"
-  },
-  {
-    title: "Media",
-    desc: "Watch our journey in action.",
-    img: "/images/heroImage.png",
-    href: "/media"
+    title: "News",
+    desc: "Stay updated with the latest news.",
+    img: "/images/homeImage3.jpg",
+    href: "/news"
   },
   {
     title: "About Us",

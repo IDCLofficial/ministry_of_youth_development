@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { BiChevronDown } from "react-icons/bi";
 
 const categories = [
@@ -12,17 +13,17 @@ const popularNews = [
   {
     title: "IMO STATE LAUNCHES MAJOR BROADBAND...",
     date: "MAY 30, 2025",
-    img: "/images/homeImage1.png",
+    img: "/images/homeImage1.jpg",
   },
   {
     title: "IMO STATE LAUNCHES MAJOR BROADBAND...",
     date: "MAY 30, 2025",
-    img: "/images/homeImage1.png",
+    img: "/images/homeImage1.jpg",
   },
   {
     title: "IMO STATE LAUNCHES MAJOR BROADBAND...",
     date: "MAY 30, 2025",
-    img: "/images/homeImage1.png",
+    img: "/images/homeImage1.jpg",
   },
 ];
 
@@ -59,13 +60,15 @@ export default function NewsSidebar() {
         <ul className="space-y-2 md:space-y-4">
           {popularNews.map((news, idx) => (
             <li key={idx} className="flex gap-2 md:gap-3 items-center">
-              <div className="w-[50px] h-[50px] relative rounded overflow-hidden flex-shrink-0">
-                <Image src={news.img} alt={news.title} width={100} height={100} className="object-cover w-full h-full" />
-              </div>
-              <div>
+              <Link href={`/news/${news.title}`} className="flex gap-2 md:gap-3 items-center">
+                <div className="w-[50px] h-[50px] relative rounded overflow-hidden flex-shrink-0">
+                  <Image src={news.img} alt={news.title} width={100} height={100} className="object-cover w-full h-full" />
+                </div>
+                <div>
                 <div className="text-xs md:text-[14px] font-medium leading-tight line-clamp-2">{news.title}</div>
-                <div className="text-[10px] text-gray-500 mt-1">{news.date}</div>
-              </div>
+                  <div className="text-[10px] text-gray-500 mt-1">{news.date}</div>
+                </div>
+              </Link>
             </li>
           ))}
         </ul>
