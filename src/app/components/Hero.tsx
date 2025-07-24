@@ -1,3 +1,5 @@
+import { AppLink } from "./AppLink";
+import PageTransition from "./PageTransition";
 import { Title } from "./Title";
 
 interface HeroProps {
@@ -12,11 +14,15 @@ export const Hero = ({title, caption, subtitle}: HeroProps) => {
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-transparent z-0"></div>
             <div className="relative z-10 py-10">
                 <div className="w-full md:w-[60%] flex flex-col gap-4">
-                    <Title label={title}/>
-                    <h1 className="text-2xl md:text-[3rem] font-bold text-white leading-tight">{caption}</h1>
-                    <p className="text-sm md:text-[1rem] font-light leading-[1.5] text-white">
-                        {subtitle}
-                    </p>
+                    <PageTransition type="fadeUp">
+                        <Title label={title}/>
+                        <h1 className="text-2xl md:text-[3rem] font-bold text-white leading-tight">{caption}</h1>
+                        <p className="text-[1rem] font-light leading-[1.5] text-white">
+                            {subtitle}
+                        </p>
+                        {/* <AppLink href="/about-us" label="Explore Opportunities" variant="secondary" className="block w-max border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] 
+                font-medium hover:bg-primary-green hover:text-white transition-all duration-300"/> */}
+                    </PageTransition>
                 </div>
             </div>
         </div>

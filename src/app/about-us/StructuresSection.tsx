@@ -8,28 +8,18 @@ export const StructuresSection = ({imgSrc}: StructuresSectionProps) => {
     const departments = {
         row1: [
             {
-                title: "Budget Department",
-                description: "Prepares and manages the state’s budget."
+                title: "Youth Officers Unit",
+                description: "Deploys and supervises Youth Development Officers (YDOs) across all 27 LGAs, serving as grassroots liaisons for ministry programs, gathering feedback, and promoting youth participation at the community level."
             },
             {
-                title: "Planning Department",
-                description: "Develops medium to long-term development plans."
+                title: "Talent Hunt & Sports Development Unit",
+                description: "Organizes and manages state-wide talent scouting programs (e.g., football tournaments, chess competitions, marathons) in collaboration with the Imo Sports Commission, discovering, training, and promoting young talents."
             },
             {
-                title: "Monitoring & Evaluation (M&E)",
-                description: "Tracks implementation and evaluates performance."
+                title: "Civic Awareness & Reorientation Unit",
+                description: "Promotes civic education and reorientation among youth, fostering responsible citizenship and community engagement through targeted programs and outreach."
             },
         ],
-        row2: [
-            {
-                title: "International Cooperation",
-                description: "Liaises with donor agencies and international development partners."
-            },
-            {
-                title: "Statistics Department",
-                description: "Collects, analyzes, and disseminates statistical data to inform policy and planning."
-            },
-        ]
     }
 
     return (
@@ -39,8 +29,8 @@ export const StructuresSection = ({imgSrc}: StructuresSectionProps) => {
                 <h2 className="text-xl md:text-[43px] font-medium text-white">
                     Our Structure
                 </h2>
-                <p className="text-white text-sm md:text-[1rem] mb-8 md:mb-16 w-full md:w-[40%] mx-auto">
-                    The Ministry is divided into specialized departments that collectively drive Imo&apos;s digital agenda
+                <p className="text-white text-sm md:text-[1rem] mb-8 md:mb-16 w-full md:w-[60%] mx-auto">
+                    The Ministry is divided into specialized departments that collectively drive Imo's vision of youth empowerment, talent development, and civic engagement.
                 </p>
                 {/* Main Image */}
                 <div className="relative w-full h-[180px] md:h-[500px] rounded-xl overflow-hidden shadow-lg mb-8 md:mb-20">
@@ -66,7 +56,7 @@ export const StructuresSection = ({imgSrc}: StructuresSectionProps) => {
                             </div>
                         ))}
                     </div>
-                    <div className="flex flex-col md:flex-row w-full gap-2">
+                    {/* <div className="flex flex-col md:flex-row w-full gap-2">
                         {departments.row2.map((department, index) => (
                             <div key={index} className="flex-1 bg-white p-4 md:p-8 shadow-md border border-gray-200 mb-2 md:mb-0">
                                 <h3 className="font-bold text-base md:text-[22px] text-dark-primary mb-2 md:mb-3">
@@ -77,7 +67,7 @@ export const StructuresSection = ({imgSrc}: StructuresSectionProps) => {
                                 </p>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

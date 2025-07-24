@@ -4,24 +4,24 @@ import { useEffect, useState, useRef } from "react";
 
 const stats = [
   {
-    value: "₦474B+",
-    desc: "2025 State Budget Size",
+    value: "50,000+",
+    desc: "Youths Empowered Through Programs",
   },
   {
-    value: "655",
-    desc: "Autonomous Communities Engaged",
+    value: "1,200+",
+    desc: "Entrepreneurship Grants Awarded",
   },
   {
-    value: "5",
-    desc: "World Bank Grants Secured",
+    value: "300+",
+    desc: "Youth-Led Projects Supported",
+  },
+  {
+    value: "27",
+    desc: "Local Government Areas Reached",
   },
   {
     value: "100+",
-    desc: "Public Projects Monitored Annually",
-  },
-  {
-    value: "20+",
-    desc: "Data-Driven Policies Implemented",
+    desc: "Skill Acquisition Workshops Conducted",
   },
 ];
 

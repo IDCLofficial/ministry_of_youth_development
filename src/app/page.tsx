@@ -1,36 +1,33 @@
-import { AppLink } from "@/app/components/AppLink";
 import { Hero } from "@/app/components/Hero";
-import { Title } from "@/app/components/Title";
-import Image from "next/image";
 import AboutSection from "@/app/components/AboutSection";
 import AboutCommisioner from "@/app/components/AboutCommisioner";
 import QuickLinks from "@/app/components/QuickLinks";
 import LatestNews from "@/app/components/LatestNews";
-import FeaturedPartners from "@/app/components/FeaturedPartners";
 import Stats from "@/app/components/Stats";
 import CTASection from "@/app/components/CTASection";
 import Footer from "@/app/components/Footer";
-import Advertisement from "@/app/components/Advertisement";
+import FeaturedInitiatives from "./components/FeaturedInitiatives";
 
 export default function Home() {
   return (
     <div className="h-screen w-full bg-red-400">
       <Hero
-        title="Imo State Ministry of Budget, Economic Planning & Statistics" 
-        caption="Empowering Imo’s Growth Through Strategic Planning and Sustainable Development." 
-        subtitle="TThe Ministry of Budget, Economic Planning, and Statistics serves as the economic backbone of Imo State, guiding inclusive growth, data-driven decisions, and coordinated development planning." 
+        title="Imo State Ministry of Youth Development" 
+        caption="Enlighten, Engage, Empower Imo Youth for a More Productive Workforce." 
+        subtitle="The Imo State Ministry of Youth Development is dedicated to nurturing talent, fostering innovation, and creating opportunities for youth empowerment through community engagement, building a vibrant and productive future for all Imolites."
       />
       <AboutSection 
         title="About Us"
-        subtitle="The Imo State Ministry of Budget, Economic Planning, and Statistics is committed to providing a transparent and effective budgeting system while strengthening economic planning and data reliability across the state."
+        subtitle="The Imo State Ministry of Sport and Youth Development is committed to providing a transparent and effective sports and youth development system while strengthening sports and youth development across the state."
         image1="/images/homeImage1.jpg"
         image2="/images/homeImage2.jpg"
       />
       <AboutCommisioner 
-        imgSrc="/images/commissioner.png" 
+        imgSrc="/images/commissioner.jpg" 
         title="About The Commissioner" 
       />
-      <section className="w-full flex flex-col gap-8">
+      <section className="w-full flex flex-col gap-4">
+        <FeaturedInitiatives />
         <QuickLinks />
         {/* <Advertisement /> */}
         <LatestNews />
@@ -38,8 +35,8 @@ export default function Home() {
       <Stats />
       {/* <FeaturedPartners /> */}
       <CTASection 
-        heading="Partnering for a Prosperous Imo"
-        subtext="Join us in shaping a transparent, data-driven, and sustainable future for all through effective budgeting and strategic economic planning."
+        heading="Partner with Us Today!"
+        subtext="You can partner with us in various ways, including but not limited to: Sponsoring our events, providing financial support, or partnering with us on a project."
         buttonLabel="Contact Us"
         buttonHref="/contact-us"
       />

@@ -9,24 +9,24 @@ import Footer from "../components/Footer";
 export default function AboutUs() {
     return (
         <div className="h-screen">
-            <AboutUsHero ministryName="Ministry of Budget, Economic Planning & Statistics" />
+            <AboutUsHero ministryName="Ministry of Sports and Youth Development" />
             <AboutSection 
-                aboutText="The Imo State Ministry of Budget, Economic Planning & Statistics is the driving force behind the state’s sustainable development and economic transformation. Our mission is to formulate transparent budgets, develop strategic economic plans, and provide reliable statistical data to guide policy decisions and resource allocation. We are committed to fostering inclusive growth, ensuring fiscal responsibility, and enhancing the quality of life for all citizens of Imo State. Through collaboration, innovation, and data-driven strategies, the ministry leads efforts to build a resilient economy, empower communities, and create opportunities for present and future generations."
+                aboutText="The Imo State Ministry of Sports and Youth Development is dedicated to empowering the youth and advancing sports as a catalyst for personal and community growth. Our vision is to nurture talent, promote healthy lifestyles, and create inclusive opportunities for all Imolites through innovative sports programs, leadership initiatives, and youth engagement. We are committed to fostering excellence, teamwork, and resilience, while building a vibrant sporting culture that inspires achievement and unity across Imo State. By collaborating with stakeholders and leveraging resources, we strive to develop future leaders and athletes who will contribute positively to the state’s progress and well-being."
                 imgSrc="/images/homeImage1.jpg" 
-                altText="Ministry of Budget, Economic Planning and Statistics conference event" 
+                altText="Ministry of Sports and Youth Development conference event" 
             />
             <CommissionerSection 
-                imgSrc="/images/commissioner2.jpg" 
-                altText="Dr. (Rt. Hon.) C.C. Osuala" 
-                commissionerName="Dr. (Rt. Hon.) C.C. Osuala" 
-                commissionerDescription="As Commissioner for Budget, Economic Planning & Statistics, Dr. (Rt. Hon.) C.C. Osuala is a seasoned leader and policy advocate dedicated to fostering sustainable economic growth and development in Imo State."
+                imgSrc="/images/commissioner.jpg" 
+                altText="Hon. Dr. Emeka Mandelaa" 
+                commissionerName="Hon. Dr. Emeka Mandela" 
+                commissionerDescription="As Commissioner for Sports and Youth Development, Dr. (Rt. Hon.) Emeka Mandela is a seasoned leader and policy advocate dedicated to fostering sustainable sports and youth development in Imo State."
             />     
             <ObjectivesSection />
             <StructuresSection 
                 imgSrc="/images/building.png"
             />
             <CTASection 
-                heading="Be part of Imo’s transformation with MBEPS"
+                heading="Be part of Imo’s transformation with MSYD"
                 buttonLabel="See Our Projects"
                 buttonHref="/projects"
             />

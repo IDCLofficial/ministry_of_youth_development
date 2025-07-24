@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BiChevronDown } from "react-icons/bi";
+import newsList from "./newsList";
 
 const categories = [
   { name: "Latest Updates", count: 12 },
@@ -9,23 +10,7 @@ const categories = [
   { name: "Latest Updates", count: 12 },
 ];
 
-const popularNews = [
-  {
-    title: "IMO STATE LAUNCHES MAJOR BROADBAND...",
-    date: "MAY 30, 2025",
-    img: "/images/homeImage1.jpg",
-  },
-  {
-    title: "IMO STATE LAUNCHES MAJOR BROADBAND...",
-    date: "MAY 30, 2025",
-    img: "/images/homeImage1.jpg",
-  },
-  {
-    title: "IMO STATE LAUNCHES MAJOR BROADBAND...",
-    date: "MAY 30, 2025",
-    img: "/images/homeImage1.jpg",
-  },
-];
+const popularNews = newsList.slice(0, 3).map(({ title, date, img }) => ({ title, date, img }));
 
 export default function NewsSidebar() {
   return (

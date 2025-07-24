@@ -1,37 +1,43 @@
 export const ObjectivesSection = () => {
     const objectives = [
         {
-            title: "Guide Inclusive Growth",
-            description: "Promote equitable and inclusive economic growth across Imo State by ensuring that development initiatives benefit all communities and demographics."
+            title: "Empower Youth Through Skills and Leadership Training",
+            description: "Provide platforms and programs for Imo youth to develop leadership, entrepreneurial, and life skills for personal and professional growth."
         },
         {
-            title: "Enable Data-Driven Decision Making",
-            description: "Collect, analyze, and disseminate reliable statistical data to inform government policies, resource allocation, and strategic planning."
+            title: "Promote Grassroots Sports Development",
+            description: "Identify and nurture sporting talent at the community level through regular competitions, talent hunts, and school sports programs."
         },
         {
-            title: "Coordinate Development Planning",
-            description: "Lead the formulation and implementation of coordinated development plans that align with the state’s long-term vision and priorities."
+            title: "Enhance Access to Youth Empowerment Opportunities",
+            description: "Facilitate scholarships, grants, and mentorship programs to support youth education, innovation, and career advancement."
+        },
+        // {
+        //     title: "Foster Social Inclusion and Civic Engagement",
+        //     description: "Encourage youth participation in civic activities, volunteerism, and community service to build responsible and engaged citizens."
+        // },
+        {
+            title: "Develop and Maintain Sports Infrastructure",
+            description: "Invest in the construction, renovation, and maintenance of modern sports facilities accessible to all communities."
         },
         {
-            title: "Ensure Transparent and Accountable Budgeting",
-            description: "Develop and manage annual budgets with a focus on transparency, fiscal responsibility, and optimal use of public resources."
+            title: "Promote Healthy Lifestyles and Wellness",
+            description: "Organize fitness campaigns, marathons, and health education programs to encourage physical activity and well-being among youth."
         },
         {
-            title: "Foster Sustainable Economic Development",
-            description: "Design and execute strategies that support sustainable economic growth, job creation, and improved quality of life for Imo State residents."
-        },
-        {
-            title: "Strengthen Stakeholder Collaboration",
-            description: "Engage with government agencies, private sector, civil society, and development partners to achieve shared economic and social objectives."
+            title: "Strengthen Partnerships for Youth and Sports Development",
+            description: "Collaborate with local, national, and international organizations to expand opportunities and resources for youth and sports initiatives."
         }
     ];
 
     const coreValues = [
+        "Enlightenment",
+        "Engagement",
+        "Empowerment",
+        "Inclusiveness",
         "Integrity",
-        "Efficiency",
-        "Collaboration",
-        "Innovation",
-        "Inclusiveness"
+        "Excellence",
+        "Social Responsibility"
     ];
 
     return (
@@ -40,7 +46,7 @@ export const ObjectivesSection = () => {
                 {/* IMDEEG's Objectives */}
                 <div className="mb-12 md:mb-16">
                     <h2 className="text-xl md:text-[43px] font-medium text-center mb-8 md:mb-12">
-                        IMDEEG&apos;s objectives
+                        MSYD objectives
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
                         {objectives.map((objective, index) => (

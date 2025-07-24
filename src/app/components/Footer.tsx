@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const info = {
     logo: "/logo.png",
-    ministry: "Digital Economy & E-Government",
-    description: "The Imo State Ministry of Budget, Economic Planning & Statistics is dedicated to driving sustainable development and inclusive growth in Imo State. The ministry leads the formulation of transparent budgets, strategic economic plans, and reliable statistical data to guide policy decisions, ensure fiscal responsibility, and improve the quality of life for all citizens.",
+    ministry: "Sports and Youth Development",
+    description: "The Imo State Ministry of Sport and Youth Development is dedicated to nurturing talent, fostering innovation, and creating opportunities for youth empowerment through inclusive sports programs, leadership initiatives, and community engagement, building a vibrant and productive future for all Imolites.",
     quickLinks: [
         {
             label: "Projects",
@@ -47,7 +47,7 @@ const info = {
             href: "/"
         },
         {
-            label: "Info@imdeeg.im.gov.ng",
+            label: "Info@myd.im.gov.ng",
             href: "/"
         },  
         {
