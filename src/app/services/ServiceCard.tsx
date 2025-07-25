@@ -13,7 +13,7 @@ export default function ServiceCard({ imgSrc, title, description }: ServiceCardP
       <div className="w-20 h-20 mb-4 relative flex items-center justify-center">
         <Image src={imgSrc} alt={title} fill className="object-contain" />
       </div>
-      <h3 className="text-base md:text-lg font-semibold mb-2 uppercase tracking-wide">{title}</h3>
+      <h3 className="text-xl md:text-lg font-semibold mb-2 uppercase tracking-wide">{title}</h3>
       <p className="text-dark-primary-body text-base">{description}</p>
     </div>
   );

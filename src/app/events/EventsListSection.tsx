@@ -39,12 +39,12 @@ export default function EventsListSection() {
               </div>
               <div className="flex-1 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
                 <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:items-center gap-10 text-gray-500 text-xs mb-1">
+                  <div className="flex flex-row items-center gap-4 md:gap-10 text-gray-500 text-xs mb-1">
                     <span>{event.date}</span>
                     <span>{event.location}</span>
                   </div>
                   <h3 className="text-xl font-medium mb-1">{event.title}</h3>
-                  <p className="text-dark-primary-body text-sm mb-2">{event.description}</p>
+                  <p className="text-dark-primary-body text-base mb-2">{event.description}</p>
                 </div>
                 <div className="flex justify-end md:justify-center">
                   <Link href={`/events/${event.slug}`} className="border border-primary-green text-primary-green text-[14px] px-4 py-2 rounded font-semibold hover:bg-green-50 transition">More Information</Link>

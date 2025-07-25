@@ -18,7 +18,7 @@ const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle }) 
     >
       <div className="relative z-10 w-full flex flex-col items-center justify-end gap-0 h-full px-4 text-center">
         <motion.h1
-          className="text-white text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg"
+          className="text-white text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg"
           initial={{ opacity: 1 }}
           animate={{}}
         >
@@ -34,7 +34,6 @@ const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle }) 
             </motion.span>
           ))}
         </motion.h1>
-        <p className="text-white text-lg md:text-[16px] max-w-2xl drop-shadow-lg">{subtitle}</p>
         <SearchBar
           placeholder="Search"
           value=""
