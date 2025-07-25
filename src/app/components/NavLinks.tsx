@@ -7,9 +7,9 @@ import React from "react";
 const navLinks = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about-us" },
+    { label: "Departments", href: "/departments" },
     { label: "Services", href: "/services" },
     { label: "Projects", href: "/projects" },
-    { label: "Initiatives", href: "/initiatives" },
     { label: "Events", href: "/events" },
     { label: "Media", href: "/media" },
     { label: "Contact Us", href: "/contact-us" }
@@ -24,7 +24,7 @@ const NavLinks = ({ mobile = false, onClickLink }: NavLinksProps) => {
     const pathname = usePathname();
     return (
         <nav>
-            <ul className={mobile ? "flex flex-col gap-6 mt-8" : "flex items-center gap-6 list-none p-0 m-0"}>
+            <ul className={mobile ? "flex flex-col gap-6 mt-8" : "flex items-center gap-10 list-none p-0 m-0"}>
                 {navLinks.map((link) => (
                     <li key={link.label}>
                         <Link

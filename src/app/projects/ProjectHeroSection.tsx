@@ -1,4 +1,6 @@
-import Image from "next/image";
+"use client"
+
+import { motion } from "framer-motion";
 
 export default function ProjectHeroSection() {
   return (
@@ -6,7 +8,23 @@ export default function ProjectHeroSection() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/30 z-0"></div>
       <div className="relative z-10 flex items-center justify-center w-full h-full">
-        <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold text-center px-4">Empowering Imo’s Digital Future</h1>
+        <motion.h1
+          className="text-white text-2xl md:text-4xl lg:text-5xl font-bold text-center px-4"
+          initial={{ opacity: 1 }}
+          animate={{}}
+        >
+          {"See What We've Been Up To".split("").map((char, idx) => (
+            <motion.span
+              key={idx}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.04 * idx }}
+              style={{ display: "inline-block" }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </motion.h1>
       </div>
     </section>
   );

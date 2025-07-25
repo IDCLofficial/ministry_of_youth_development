@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <div className="h-screen w-full bg-red-400">
       <Hero
-        title="Imo State Ministry of Youth Development" 
+        title="Imo State Ministry of Youth Development and Talent Hunt" 
         caption="Enlighten, Engage, Empower Imo Youth for a More Productive Workforce." 
-        subtitle="The Imo State Ministry of Youth Development is dedicated to nurturing talent, fostering innovation, and creating opportunities for youth empowerment through community engagement, building a vibrant and productive future for all Imolites."
+        subtitle="The Imo State Ministry of Youth Development and Talent Hunt is dedicated to nurturing talent, fostering innovation, and creating opportunities for youth empowerment through community engagement, building a vibrant and productive future for all Imolites."
       />
       <AboutSection 
         title="About Us"
-        subtitle="The Imo State Ministry of Sport and Youth Development is committed to providing a transparent and effective sports and youth development system while strengthening sports and youth development across the state."
+        subtitle="Enlighten, engage, and empower Imo youth through purposeful policies, training programs, and development initiatives. The Ministry serves as a catalyst for nurturing talent, building character, and fostering community-driven growth through civic participation."
         image1="/images/homeImage1.jpg"
         image2="/images/homeImage2.jpg"
       />

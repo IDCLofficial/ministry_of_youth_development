@@ -1,32 +1,39 @@
 import { AboutUsHero } from "./AboutUsHero";
 import { AboutSection } from "./AboutSection";
 import { ObjectivesSection } from "./ObjectivesSection";
-import { CommissionerSection } from "./CommissionerSection";
 import { StructuresSection } from "./StructuresSection";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
+import { MVSSection } from "./MVSSection";
+import { AppLink } from "../components/AppLink";
+import TeamGridSection from "./team/TeamGridSection";
+
+const teamMembers = Array(4).fill({
+    name: "Magreth Nonso",
+    position: "Position",
+    imgSrc: "/images/team.png" // Use a placeholder or real image if available
+  });
 
 export default function AboutUs() {
     return (
         <div className="h-screen">
             <AboutUsHero ministryName="Ministry of Sports and Youth Development" />
             <AboutSection 
-                aboutText="The Imo State Ministry of Sports and Youth Development is dedicated to empowering the youth and advancing sports as a catalyst for personal and community growth. Our vision is to nurture talent, promote healthy lifestyles, and create inclusive opportunities for all Imolites through innovative sports programs, leadership initiatives, and youth engagement. We are committed to fostering excellence, teamwork, and resilience, while building a vibrant sporting culture that inspires achievement and unity across Imo State. By collaborating with stakeholders and leveraging resources, we strive to develop future leaders and athletes who will contribute positively to the state’s progress and well-being."
+                aboutText="The Imo State Ministry of Youth Development & Talent Hunt is dedicated to building a dynamic, empowered, and innovative youth population in Imo State. Under the leadership of Hon. Emeka Mandela Ukaegbu, the Ministry works to foster strong synergy between the state government and its youth by discovering, nurturing, and projecting young talents across diverse sectors such as sports, creative arts, ICT, agriculture, and entrepreneurship. Through this collaborative approach, the Ministry partners with key stakeholders like the Imo State Sports Commission, Sports Writers Association of Nigeria (SWAN), Nigerian Army (34 Artillery Brigade, Obinze), and DSS, to deliver impactful programs—ranging from football scouting and civic reorientation to mentorship and security awareness initiatives."
                 imgSrc="/images/homeImage1.jpg" 
                 altText="Ministry of Sports and Youth Development conference event" 
             />
-            <CommissionerSection 
-                imgSrc="/images/commissioner.jpg" 
-                altText="Hon. Dr. Emeka Mandelaa" 
-                commissionerName="Hon. Dr. Emeka Mandela" 
-                commissionerDescription="As Commissioner for Sports and Youth Development, Dr. (Rt. Hon.) Emeka Mandela is a seasoned leader and policy advocate dedicated to fostering sustainable sports and youth development in Imo State."
-            />     
+            <MVSSection />   
             <ObjectivesSection />
             <StructuresSection 
                 imgSrc="/images/building.png"
             />
+            <section className="w-full py-10 md:py-16 px-2 md:px-4 bg-white mx-auto flex flex-col items-center">
+                <TeamGridSection members={teamMembers} />
+                <AppLink href="/about-us/team" label="Learn More" variant="primary" className="hover:bg-primary-green/80 transition-all duration-300"/>
+            </section>
             <CTASection 
-                heading="Be part of Imo’s transformation with MSYD"
+                heading="Join Us to Transform the Imo Youths"
                 buttonLabel="See Our Projects"
                 buttonHref="/projects"
             />

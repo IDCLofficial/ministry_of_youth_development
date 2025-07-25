@@ -1,7 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function NewsCard({ news }: { news: any }) {
+interface News {
+  title: string;
+  date: string;
+  img: string;
+  badge: string;
+  desc: string;
+}
+
+export default function NewsCard({ news }: { news: News }) {
   return (
     <Link href={`/news/${news.title}`} className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
       <div className="relative w-full h-48">

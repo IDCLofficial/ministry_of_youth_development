@@ -15,7 +15,11 @@ const CommissionerSection: React.FC<CommissionerSectionProps> = ({ imgSrc, headi
       </div>
       <div className="flex-1 w-full mt-4 md:mt-0">
         <h2 className="text-lg md:text-[43px] font-medium mb-2 md:mb-4 text-dark-primary">{heading}</h2>
-        <p className="text-gray-700 text-sm md:text-[1rem] leading-relaxed text-justify whitespace-pre-line">{description}</p>
+        <p className="text-gray-700 text-sm md:text-[1rem] leading-relaxed text-justify whitespace-pre-line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non itaque ab maxime nam similique repellendus quidem, neque dolores labore architecto sapiente praesentium quo mollitia officia ex fugit? Dolorum, eaque ut!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, error quos? Accusamus distinctio cupiditate natus delectus inventore neque ut nisi placeat quae nobis harum consectetur quos ducimus beatae, nulla quisquam.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, aliquid! Aut soluta, dolorum error eligendi recusandae harum ab nostrum quos ipsam. Quam repellat debitis at, nisi quia eius deserunt! Dolore.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, quidem distinctio numquam minus earum laboriosam, dicta et similique, commodi asperiores ut alias reiciendis unde! Nisi doloremque odit facere quas laudantium!
+        </p>
       </div>
     </section>
   );

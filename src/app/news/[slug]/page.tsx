@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ReadySection from "../ReadySection";
 import Footer from "../../components/Footer";
 import NewsHeroSection from "./NewsHeroSection";
 import NewsBodySection from "./NewsBodySection";
@@ -18,12 +17,8 @@ export async function generateStaticParams() {
   return newsList.map(news => ({ slug: slugify(news.title) }));
 }
 
-interface NewsDetailPageProps {
-  params: { slug: string };
-}
-
-export default function NewsDetailPage({ params }: NewsDetailPageProps) {
-  const { slug } = params;
+export default async function NewsDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const news = newsList.find(item => slugify(item.title) === slug);
 
   if (!news) {

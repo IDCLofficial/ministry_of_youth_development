@@ -1,32 +1,28 @@
 export const ObjectivesSection = () => {
     const objectives = [
         {
-            title: "Empower Youth Through Skills and Leadership Training",
-            description: "Provide platforms and programs for Imo youth to develop leadership, entrepreneurial, and life skills for personal and professional growth."
+            title: "Talent Discovery & Development",
+            description: "Coordinating state-wide programs like multi-sport scouting, innovation competitions, and creative showcases."
         },
         {
-            title: "Promote Grassroots Sports Development",
-            description: "Identify and nurture sporting talent at the community level through regular competitions, talent hunts, and school sports programs."
+            title: "Youth Capacity Building",
+            description: "Rolling out transformative initiatives including SkillUpImo, aimed at equipping youth with digital and entrepreneurial skills for the 21st-century economy."
         },
         {
-            title: "Enhance Access to Youth Empowerment Opportunities",
-            description: "Facilitate scholarships, grants, and mentorship programs to support youth education, innovation, and career advancement."
-        },
-        // {
-        //     title: "Foster Social Inclusion and Civic Engagement",
-        //     description: "Encourage youth participation in civic activities, volunteerism, and community service to build responsible and engaged citizens."
-        // },
-        {
-            title: "Develop and Maintain Sports Infrastructure",
-            description: "Invest in the construction, renovation, and maintenance of modern sports facilities accessible to all communities."
+            title: "Civic & Security Engagement",
+            description: "Hosting forums, security summits, and mentorship collaborations with DSS and the Nigerian Army to promote peace, discipline, and civic-mindedness. \nStrategic Partnerships"
         },
         {
-            title: "Promote Healthy Lifestyles and Wellness",
-            description: "Organize fitness campaigns, marathons, and health education programs to encourage physical activity and well-being among youth."
+            title: "Imo State Sports Commission",
+            description: "Works alongside the ministry to bring sports talents to the fore and create pathways for athlete development. "
         },
         {
-            title: "Strengthen Partnerships for Youth and Sports Development",
-            description: "Collaborate with local, national, and international organizations to expand opportunities and resources for youth and sports initiatives."
+            title: "SWAN – Sports Writers Association of Nigeria",
+            description: "A key publicity partner promoting the state’s youth initiatives and talent exposure."
+        },
+        {
+            title: "Nigerian Army & DSS",
+            description: "Collaborate on civic and peace-building activities, ensuring youth are channeled towards positive societal contribution."
         }
     ];
 
@@ -46,7 +42,7 @@ export const ObjectivesSection = () => {
                 {/* IMDEEG's Objectives */}
                 <div className="mb-12 md:mb-16">
                     <h2 className="text-xl md:text-[43px] font-medium text-center mb-8 md:mb-12">
-                        MSYD objectives
+                        Our Strategic Objectives
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
                         {objectives.map((objective, index) => (

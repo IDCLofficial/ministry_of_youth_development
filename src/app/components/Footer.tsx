@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const info = {
     logo: "/logo.png",
-    ministry: "Sports and Youth Development",
-    description: "The Imo State Ministry of Sport and Youth Development is dedicated to nurturing talent, fostering innovation, and creating opportunities for youth empowerment through inclusive sports programs, leadership initiatives, and community engagement, building a vibrant and productive future for all Imolites.",
+    ministry: "Youth Development and Talent Hunt",
+    description: "The Imo State Ministry of Youth Development and Talent Hunt is dedicated to nurturing talent, fostering innovation, and creating opportunities for youth empowerment through community engagement, building a vibrant and productive future for all Imolites.",
     quickLinks: [
         {
             label: "Projects",

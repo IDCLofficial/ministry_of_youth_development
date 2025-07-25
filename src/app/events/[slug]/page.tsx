@@ -6,6 +6,12 @@ import Footer from "../../components/Footer";
 import events from "../eventsList";
 import { useEffect, useState } from "react";
 
+interface Speaker {
+  img: string;
+  name: string;
+  role: string;
+}
+
 function Countdown({ eventDateTime }: { eventDateTime: string }) {
   const [timeLeft, setTimeLeft] = useState<{days: number, hours: number, minutes: number, seconds: number} | null>(null);
   const [ended, setEnded] = useState(false);
@@ -133,7 +139,7 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
       <section className="w-full max-w-6xl mx-auto px-4 mb-12 md:mb-16">
         <h2 className="text-lg md:text-2xl font-bold mb-4 md:mb-6">Speakers</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-          {(event.speakers && event.speakers.length > 0) ? event.speakers.map((sp, idx) => (
+          {(event.speakers && (event.speakers as Speaker[]).length > 0) ? (event.speakers as Speaker[]).map((sp, idx) => (
             <div key={idx} className="flex flex-col items-start bg-white rounded-xl shadow border border-gray-200 p-3 md:p-4">
               <div className="w-full h-40 md:w-full md:h-48 relative mb-2 md:mb-3 rounded-lg overflow-hidden">
                 <Image src={sp.img} alt={sp.name} fill className="object-cover" />

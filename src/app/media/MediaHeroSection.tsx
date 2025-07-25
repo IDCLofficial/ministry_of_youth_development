@@ -1,5 +1,9 @@
+"use client"
+
 import React from "react";
 import SearchBar from "../components/SearchBar";
+import { SubsequentHero } from "../components/Hero";
+import { motion } from "framer-motion";
 
 interface MediaHeroSectionProps {
   title: string;
@@ -7,21 +11,38 @@ interface MediaHeroSectionProps {
   backgroundImage: string;
 }
 
-const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle, backgroundImage }) => {
+const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle }) => {
   return (
-    <section
-      className="relative w-full h-[380px] md:h-[420px] flex flex-col justify-center items-center text-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+    <SubsequentHero
+      className={`bg-[url('/images/gradient.png')] bg-cover bg-center`}
     >
-      <div className="absolute inset-0 bg-black/60 z-0" />
-      <div className="relative z-10 w-full flex flex-col items-center justify-end gap-0 h-full px-4">
-        <h1 className="text-white text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">{title}</h1>
+      <div className="relative z-10 w-full flex flex-col items-center justify-end gap-0 h-full px-4 text-center">
+        <motion.h1
+          className="text-white text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg"
+          initial={{ opacity: 1 }}
+          animate={{}}
+        >
+          {title.split("").map((char, idx) => (
+            <motion.span
+              key={idx}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.04 * idx }}
+              style={{ display: "inline-block" }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </motion.h1>
         <p className="text-white text-lg md:text-[16px] max-w-2xl drop-shadow-lg">{subtitle}</p>
         <SearchBar
           placeholder="Search"
+          value=""
+          onChange={() => {}}
+          onSearch={() => {}}
         />
       </div>
-    </section>
+    </SubsequentHero>
   );
 };
 

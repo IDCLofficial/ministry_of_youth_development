@@ -12,7 +12,7 @@ interface AboutSectionProps {
 
 export default function AboutSection({title, subtitle, image1, image2}: AboutSectionProps) {
   return (
-    <section className={`relative w-full p-4 md:p-8 py-12 md:py-20 bg-[url('/images/gradient.png')] bg-no-repeat bg-cover shadow-lg overflow-hidden`}>
+    <section className={`relative w-full p-4 md:px-4 py-12 md:py-20 bg-[url('/images/gradient.png')] bg-no-repeat bg-cover shadow-lg overflow-hidden`}>
       <div className="flex flex-col gap-8 items-center w-full md:w-[90%] mx-auto">
         {/* Left: Text Content */}
         <div className="flex flex-col md:flex-row items-center h-full justify-between w-full gap-6 md:gap-0">
@@ -21,8 +21,7 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
                 <Title label={title}/>
                 <h2 className="text-xl md:text-3xl lg:text-[43px] font-bold text-white leading-tight mb-4">
                     Our Mandate —<br/>
-                    Ministry of<br className="hidden md:block" />
-                    <span className="text-green-400"> Youth Development</span>
+                    <span className="text-green-400"> MYDTH</span>
                 </h2>
               </PageTransition>
             </div>

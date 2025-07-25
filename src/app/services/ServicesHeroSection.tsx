@@ -1,18 +1,15 @@
 "use client"
-import { Title } from "../components/Title";
+import React from "react";
 import { SubsequentHero } from "../components/Hero";
+import { Title } from "../components/Title";
 import { motion } from "framer-motion";
 
-interface AboutUsHeroProps {
-    ministryName: string;
-}
-
-export const AboutUsHero = ({ ministryName }: AboutUsHeroProps) => {
+export default function ServicesHeroSection() {
     return (
-        <SubsequentHero className="bg-[url('/images/gradient.png')] bg-cover bg-center">
+        <SubsequentHero  className="bg-[url('/images/gradient.png')] bg-cover bg-center">
             {/* Navigation Highlight */}
             <div className="relative z-10 flex justify-center">
-                <Title label="About Us" />
+                <Title label="Services" />
             </div>
             <div className="relative z-10 flex justify-center mt-4">
                 <div className="w-full md:w-[60%] flex flex-col items-center text-center">
@@ -21,7 +18,7 @@ export const AboutUsHero = ({ ministryName }: AboutUsHeroProps) => {
                         initial={{ opacity: 1 }}
                         animate={{}}
                     >
-                        {`Our Story - ${ministryName}`.split("").map((char, idx) => (
+                        {"Inspiring Youth and Nurturing Talent for a Brighter Future".split("").map((char, idx) => (
                             <motion.span
                                 key={idx}
                                 initial={{ opacity: 0 }}
@@ -37,4 +34,5 @@ export const AboutUsHero = ({ ministryName }: AboutUsHeroProps) => {
             </div>
         </SubsequentHero>
     );
-}; 
+} 
+

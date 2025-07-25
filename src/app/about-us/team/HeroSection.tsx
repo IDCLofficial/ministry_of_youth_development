@@ -1,5 +1,7 @@
+"use client"
 import React from "react";
 import { Title } from "../../components/Title";
+import { motion } from "framer-motion";
 
 interface HeroSectionProps {
   heading: string;
@@ -14,9 +16,23 @@ const HeroSection: React.FC<HeroSectionProps> = ({ heading}) => {
       </div>
       <div className="relative z-10 flex justify-center mt-4">
         <div className="w-full md:w-[65%] flex flex-col items-center text-center">
-          <h1 className="text-2xl md:text-[3rem] font-bold text-white leading-tight">
-            {heading}
-          </h1>
+          <motion.h1
+            className="text-2xl md:text-[3rem] font-bold text-white leading-tight"
+            initial={{ opacity: 1 }}
+            animate={{}}
+          >
+            {heading.split("").map((char, idx) => (
+              <motion.span
+                key={idx}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.04 * idx }}
+                style={{ display: "inline-block" }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </motion.h1>
         </div>
       </div>
     </section>

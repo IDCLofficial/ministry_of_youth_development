@@ -13,8 +13,8 @@ export const Navbar = ({ onOpenSidebar }: NavbarProps) => {
             <div className="flex items-center gap-3 mb-2">
                 <Image src="/logo.png" alt="Imo State Logo" width={40} height={40} />
                 <span className="font-semibold text-sm text-white leading-tight">
-                Imo State Ministry<br />
-                of Youth Development
+                Imo State Ministry of <br />
+                Youth Development and Talent Hunt
                 </span>
             </div>
             {/* Desktop NavLinks */}

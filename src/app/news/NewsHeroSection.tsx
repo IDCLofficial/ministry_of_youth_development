@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import SearchBar from "../components/SearchBar";
 import { useState } from "react";
 import newsList from "./newsList";
@@ -7,7 +6,7 @@ import Link from "next/link";
 
 export default function NewsHeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<{ title: string; date: string } []>([]);
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,7 +44,7 @@ export default function NewsHeroSection() {
             {showDropdown && (
               <div className="absolute left-0 right-0 top-[70%] mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-30 max-h-60 overflow-y-auto w-full">
                 {results.length > 0 ? (
-                  results.map((item, idx) => (
+                  results.map((item: { title: string; date: string }, idx) => (
                     <Link href={`/news/${item.title}`} key={idx} className="px-4 py-3 hover:bg-gray-100 cursor-pointer flex flex-col border-b last:border-b-0">
                       <span className="font-semibold text-gray-800 text-base">{item.title}</span>
                       <span className="text-xs text-gray-500">{item.date}</span>

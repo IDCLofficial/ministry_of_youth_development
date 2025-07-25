@@ -2,15 +2,37 @@ import Image from "next/image";
 import Link from "next/link";
 import events from "./eventsList";
 
+function isUpcomingEvent(eventDateStr: string) {
+  // Try to parse date (optionally with time)
+  const parsed = Date.parse(eventDateStr);
+  if (!isNaN(parsed)) {
+    // Compare only the date part (ignore time for 'today')
+    const now = new Date();
+    const eventDate = new Date(parsed);
+    // Set both to midnight for date-only comparison
+    now.setHours(0,0,0,0);
+    eventDate.setHours(0,0,0,0);
+    return eventDate >= now;
+  }
+  return false;
+}
+
 export default function EventsListSection() {
+  // Filter only upcoming events (today or later)
+  const upcomingEvents = events.filter(event => {
+    let dateStr = event.date;
+    if (event.time) dateStr = `${event.date} ${event.time}`;
+    return isUpcomingEvent(dateStr);
+  });
+
   return (
-    <section className="w-full max-w-6xl mx-auto py-16 px-4">
+    <section className="w-full mx-auto py-16 px-4 md:px-8">
       <h2 className="text-2xl md:text-2xl font-medium mb-8">Upcoming Events</h2>
-      {events.length === 0 ? (
+      {upcomingEvents.length === 0 ? (
         <div className="text-center text-gray-500 py-12 text-lg">No upcoming events at this time. Please check back later.</div>
       ) : (
         <div className="flex flex-col gap-8">
-          {events.map((event, idx) => (
+          {upcomingEvents.map((event, idx) => (
             <div key={idx} className="flex flex-col md:flex-row gap-6 items-center border-b border-b-[#C8C8C8] pb-8 last:border-b-0">
               <div className="w-full md:w-64 h-40 relative rounded overflow-hidden flex-shrink-0">
                 <Image src={event.img} alt={event.title} fill className="object-cover" />
