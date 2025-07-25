@@ -19,9 +19,9 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
             <div className="flex flex-col gap-2 w-full md:w-auto">
               <PageTransition type="fadeUp">
                 <Title label={title}/>
-                <h2 className="text-xl md:text-3xl lg:text-[43px] font-bold text-white leading-tight mb-4">
-                    Our Mandate —<br/>
-                    <span className="text-green-400"> MYDTH</span>
+                <h2 className="text-2xl md:text-3xl lg:text-[43px] font-bold text-white leading-tight mb-4 py-4">
+                    Our Mandate — Mininstry of <br/>
+                    <span className="text-green-400"> Youth Development and Talent Hunt</span>
                 </h2>
               </PageTransition>
             </div>
@@ -30,7 +30,7 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
             </div>
             <div className="w-full md:w-auto">
               <PageTransition type="fadeUp">
-                <p className="text-gray-200 text-xs md:text-[16px] mb-6 max-w-lg text-justify">
+                <p className="text-gray-200 text-[1rem] md:text-[16px] mb-6 max-w-lg text-justify">
                     {subtitle}
                 </p>
                 <AppLink href="/about-us" label="Learn More" variant="secondary" className="border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] 
