@@ -5,8 +5,7 @@ import { StructuresSection } from "./StructuresSection";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
 import { MVSSection } from "./MVSSection";
-import { AppLink } from "../components/AppLink";
-import TeamGridSection from "./(team)/TeamGridSection";
+import TeamGridSection from "./TeamGridSection";
 
 const teamMembers = [
     {
