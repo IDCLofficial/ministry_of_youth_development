@@ -8,11 +8,18 @@ import { MVSSection } from "./MVSSection";
 import { AppLink } from "../components/AppLink";
 import TeamGridSection from "./team/TeamGridSection";
 
-const teamMembers = Array(4).fill({
-    name: "Magreth Nonso",
-    position: "Position",
-    imgSrc: "/images/team.png" // Use a placeholder or real image if available
-  });
+const teamMembers = [
+    {
+        name: "Hon. Dr. Emeka Mandela Ukaegbu",
+        position: "Commissioner",
+        imgSrc: "/images/commissioner.jpg"
+    },
+    {
+        name: "Not available",
+        position: "Permanent Secretary",
+        imgSrc: ""
+    }
+]
 
 export default function AboutUs() {
     return (
@@ -23,15 +30,14 @@ export default function AboutUs() {
                 imgSrc="/images/homeImage1.jpg" 
                 altText="Ministry of Sports and Youth Development conference event" 
             />
-            <MVSSection />   
+            <MVSSection /> 
+            <section className="w-full py-10 md:py-16 px-2 md:px-4 bg-white mx-auto flex flex-col items-center">
+                <TeamGridSection members={teamMembers} />
+            </section>  
             <ObjectivesSection />
             <StructuresSection 
                 imgSrc="/images/building.png"
             />
-            <section className="w-full py-10 md:py-16 px-2 md:px-4 bg-white mx-auto flex flex-col items-center">
-                <TeamGridSection members={teamMembers} />
-                <AppLink href="/about-us/team" label="Learn More" variant="primary" className="hover:bg-primary-green/80 transition-all duration-300"/>
-            </section>
             <CTASection 
                 heading="Join Us to Transform the Imo Youths"
                 buttonLabel="See Our Projects"
