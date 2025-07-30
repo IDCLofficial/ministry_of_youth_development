@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image";
 import { AppLink } from "./AppLink";
+import {motion} from 'framer-motion'
 
 const links = [
   {
@@ -32,7 +35,12 @@ export default function FeaturedInitiatives() {
   return (
     <section className="w-full p-4 md:p-8 py-10 md:py-16 bg-white">
       <h2 className="text-dark-primary text-2xl md:text-3xl lg:text-[43px] font-medium text-center mb-8 md:mb-12">Featured Initiatives</h2>
-      <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 px-0 md:px-4">
+      <motion.div 
+        initial = {{opacity: 0, y:80}}
+        whileInView={{opacity: 1, y: 0}}
+        transition={{ease:"easeInOut", duration:0.8}}
+        className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 px-0 md:px-4"
+      >
         {links.map((link) => (
           <div key={link.title} className="bg-white flex flex-col items-center h-full relative cursor-pointer hover:scale-105 transition-all duration-300">
             <div className="relative w-full h-[140px] md:h-[200px] z-0">
@@ -48,7 +56,7 @@ export default function FeaturedInitiatives() {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 } 

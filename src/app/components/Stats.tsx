@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useRef } from "react";
+import {motion} from "framer-motion"
 
 const stats = [
   {
@@ -91,7 +92,12 @@ export default function Stats() {
 
   return (
     <section ref={sectionRef} className="w-full bg-[#232323] p-4 md:p-8 py-10 md:py-20">
-      <div className="w-full mx-auto flex flex-col md:flex-row justify-between items-center divide-y md:divide-y-0 md:divide-x divide-gray-500">
+      <motion.div 
+        initial = {{opacity: 0, y:80}}
+        whileInView={{opacity: 1, y: 0}}
+        transition={{ease:"easeInOut", duration:0.8}} 
+        className="w-full mx-auto flex flex-col md:flex-row justify-between items-center divide-y md:divide-y-0 md:divide-x divide-gray-500"
+      >
         {stats.map((stat, idx) => {
           const { num, hasPlus, hasPercent } = parseStatValue(stat.value);
           const display =
@@ -107,7 +113,7 @@ export default function Stats() {
             </div>
           );
         })}
-      </div>
+      </motion.div>
     </section>
   );
 } 

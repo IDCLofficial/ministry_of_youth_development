@@ -1,5 +1,8 @@
+"use client"
+
 import PageTransition from "./PageTransition";
 import { Title } from "./Title";
+import {motion} from 'framer-motion'
 
 interface HeroProps {
     title: string;
@@ -11,7 +14,12 @@ export const Hero = ({title, caption, subtitle}: HeroProps) => {
     return(
         <div className={`h-screen px-4 md:px-[3rem] flex flex-col justify-center bg-[url('/images/heroImage.jpg')] bg-cover bg-center`}>
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-transparent z-0"></div>
-            <div className="relative z-10 py-10">
+            <motion.div
+                initial = {{opacity: 0, y:80}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{ease:"easeInOut", duration:0.8}}
+                className="relative z-10 py-10"
+            >
                 <div className="w-full md:w-[60%] flex flex-col gap-8">
                     <PageTransition type="fadeUp">
                         <Title label={title}/>
@@ -23,7 +31,7 @@ export const Hero = ({title, caption, subtitle}: HeroProps) => {
                 font-medium hover:bg-primary-green hover:text-white transition-all duration-300"/> */}
                     </PageTransition>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }
