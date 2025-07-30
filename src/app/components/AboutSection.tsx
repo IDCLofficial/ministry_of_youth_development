@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { Title } from "./Title";
 import { AppLink } from "./AppLink";
