@@ -6,32 +6,32 @@ import Image from "next/image";
 const departments = [
   {
     name: "Youth Development",
-    image: "/images/aboutUs1.png",
+    image: "/images/youthDevDept.jpg",
     description: "Program design, skills acquisition, talent hunts, youth empowerment coordination",
   },
   {
     name: "Administration & Supplies",
-    image: "/images/aboutUs1.png",
+    image: "/images/admin.jpeg",
     description: "HR, logistics, procurement, correspondence",
   },
   {
     name: "Finance & Accounts",
-    image: "/images/aboutUs1.png",
+    image: "/images/finance.jpg",
     description: "Budgeting, financial controls, audits",
   },
   {
     name: "Planning, Research & Statistics",
-    image: "/images/aboutUs1.png",
+    image: "/images/planning.jpeg",
     description: "Monitoring, evaluation, data collection, policy planning",
   },
   {
     name: "Public Affairs / Media & Publicity",
-    image: "/images/aboutUs1.png",
+    image: "/images/publicrel.jpeg",
     description: "Communications, events coverage, press liaison",
   },
   {
     name: "Youth Mobilization & Outreach",
-    image: "/images/aboutUs1.png",
+    image: "/images/youthMob.jpeg",
     description: "Grassroots engagement, local government liaisons, volunteer coordination",
   },
 ];
@@ -61,7 +61,7 @@ export default function UnitsTabsSection() {
       <div className="flex-1 px-4 md:px-10">
         <h2 className="text-2xl md:text-4xl font-medium mb-4">{active.name}</h2>
         <div className="w-full mb-4">
-          <Image src={active.image} alt={active.name} width={600} height={300} className="rounded-xl object-cover h-[300px]" />
+          <Image src={active.image} alt={active.name} width={600} height={300} className="rounded-xl object-fit h-[400px]" />
         </div>
         <p className="text-dark-primary-body text-base md:text-[1rem] text-dark-primary-body">{active.description}</p>
       </div>

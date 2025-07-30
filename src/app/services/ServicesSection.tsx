@@ -2,53 +2,41 @@ import ServiceCard from "./ServiceCard";
 
 const services = [
   {
-    imgSrc: "/images/tech-dev.png", // Replace with actual image paths
+    imgSrc: "/images/youthWithSkills.png", // Replace with actual image paths
     title: "Youth Empowerment & Capacity Building",
     description:
       "Organizes skills acquisition, vocational training, and entrepreneurship bootcamps. Provides access to start-up kits, tools, or microgrants for trained youths. Key Program: SkillUpImo - training 300,000 youths in digital and tech skills.",
   },
   {
-    imgSrc: "/images/e-gov.png",
+    imgSrc: "/images/talent.png",
     title: "Talent Identification and Nurturing",
     description:
       "Hosts talent hunts, creative showcases, sports events, and innovation competitions. Partners with organizations to expose youth in sports, ICT, music, and entertainment.",
   },
   {
-    imgSrc: "/images/cyber-security.png",
+    imgSrc: "/images/orientation.png",
     title: "Civic Reorientation & Leadership Training",
     description:
       "Conducts summits and peace-building campaigns like the Imo Youth Civic Reorientation Summit and Running for Peace Marathon. Trains youth leaders and peer educators.",
   },
   {
-    imgSrc: "/images/training.png",
+    imgSrc: "/images/advocacy.png",
     title: "Advocacy & Policy Engagement",
     description:
       "Promotes youth-inclusive policies and participation in governance at all levels.",
   },
   {
-    imgSrc: "/images/infrastructure.png",
+    imgSrc: "/images/financialSupport.png",
     title: "Youth Grants & Financial Support",
     description:
       "Coordinates empowerment grants (e.g., N250,000 each to 15,000 youth during Youth Day). Links youth to federal/state funding programs and donor support.",
   },
   {
-    imgSrc: "/images/single-window.png",
+    imgSrc: "/images/commemorative.png",
     title: "Organizing Commemorative Events",
     description:
       "Leads International Youth Day and Imo Youth Day celebrations. Launches new initiatives and awards outstanding youth performances.",
-  },
-  {
-    imgSrc: "/images/single-window.png",
-    title: "Digital & Innovation Exposure",
-    description:
-      "Fosters innovation via hackathons, build-a-thons, and tech incubators. Example: Build-a-Thon 2024.",
-  },
-  {
-    imgSrc: "/images/single-window.png",
-    title: "Mentorship & Career Guidance",
-    description:
-      "Links youth with mentors and provides job readiness, CV writing, and personal development support",
-  },
+  }
 
 ];
 

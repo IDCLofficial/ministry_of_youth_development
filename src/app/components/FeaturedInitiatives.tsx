@@ -23,7 +23,7 @@ const links = [
   {
     title: "Local Youth Development Officers (YDOs)",
     desc: "Who we are and what we stand for.",
-    img: "/images/gradient.png",
+    img: "/images/YDOs.jpg",
     href: "/initiatives/YDOs"
   },
 ];

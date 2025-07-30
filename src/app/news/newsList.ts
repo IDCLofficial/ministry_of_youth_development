@@ -2,14 +2,14 @@ const newsList = [
   {
     title: "Imo State Hosts Statewide Youth Sports Festival",
     date: "June 5, 2025",
-    img: "/images/FB_IMG_1753266425452.jpg",
+    img: "/images/nationalYouthCompetition.png",
     badge: "Sports Event",
     desc: "Thousands of young athletes from all 27 LGAs competed in football, athletics, and chess at the annual Youth Sports Festival, promoting unity and talent discovery."
   },
   {
     title: "Commissioner Launches Youth Empowerment Workshops",
     date: "May 20, 2025",
-    img: "/images/FB_IMG_1753266435639.jpg",
+    img: "/images/youthEmpowerment.png",
     badge: "Empowerment",
     desc: "Hon. Dr. Emeka Mandela inaugurated a series of workshops focused on leadership, entrepreneurship, and life skills for Imo youth across the state."
   },

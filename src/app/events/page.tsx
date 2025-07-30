@@ -11,8 +11,8 @@ export default function EventsPage() {
       <EventsListSection />
       <PastEvents />
       <CTASection 
-        heading="Partnering for a Prosperous Imo"
-        subtext="Want to get involved or partner with us? Reach out today"
+        heading="Partner with Us Today!"
+        subtext="You can partner with us in various ways, including but not limited to: Sponsoring our events, providing financial support, or partnering with us on a project."
         buttonLabel="Contact Us" 
         buttonHref="/contact-us"
       />

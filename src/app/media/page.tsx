@@ -18,8 +18,8 @@ export default function MediaPage() {
         <MediaGalleryGrid items={mediaItems} />
       </section>
       <CTASection 
-        heading="Ready to Experience the New Imo?" 
-        subtext="Discover our vision for an all inclusive and empowered Imo State" 
+        heading="Partner with Us Today!"
+        subtext="You can partner with us in various ways, including but not limited to: Sponsoring our events, providing financial support, or partnering with us on a project."
         buttonLabel="Contact Us" 
         buttonHref="/contact-us"
       />

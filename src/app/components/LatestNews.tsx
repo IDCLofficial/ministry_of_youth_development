@@ -7,19 +7,20 @@ const news = [
     title: "Imo State Hosts National Youth Sports Festival",
     desc: "The Ministry of Sport and Youth Development successfully organized the National Youth Sports Festival, promoting unity and talent discovery among youths.",
     date: "20th May 2024",
-    img: "/images/homeImage1.jpg"
+    img: "/images/nationalYouthCompetition.png"
   },
   {
     title: "Youth Empowerment Program Launched in Imo State",
     desc: "A new initiative aimed at empowering youths through skills acquisition and entrepreneurship training has been launched by the ministry.",
     date: "5th April 2024",
-    img: "/images/homeImage2.jpg"
+    img: "/images/youthEmpowerment.png"
   },
   {
-    title: "Imo State Sports Complex Renovation Completed",
-    desc: "The Ministry announces the completion of the state-of-the-art renovation of the Imo State Sports Complex, providing world-class facilities for athletes.",
-    date: "18th March 2024",
-    img: "/images/homeImage3.jpg"
+    title: "Civic Awareness Campaign Engages Imo Youth",
+    date: "April 15, 2025",
+    img: "/images/civicAwareness.jpg",
+    badge: "Civic Engagement",
+    desc: "A new campaign encourages youth participation in community service and responsible citizenship through outreach and school programs."
   },
 ];
 

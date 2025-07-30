@@ -9,8 +9,8 @@ export default function ProjectsPage() {
       <ProjectHeroSection />
       <ProjectsSection />
       <CTASection 
-        heading="Partner with us for a Prosperous Imo"
-        subtext="Join us in shaping a transparent, data-driven, and sustainable future for all through effective budgeting and strategic economic planning."
+        heading="Partner with Us Today!"
+        subtext="You can partner with us in various ways, including but not limited to: Sponsoring our events, providing financial support, or partnering with us on a project."
         buttonLabel="Contact Us"
         buttonHref="/contact-us" 
       />
