@@ -53,14 +53,10 @@ export default function LatestNews() {
           </Link>
         ))}
       </motion.div>
-      <motion.div 
-        initial = {{opacity: 0, y:80}}
-        whileInView={{opacity: 1, y: 0}}
-        transition={{ease:"easeInOut", duration:0.8}}
-        className="flex justify-center">
+      <div className="flex justify-center">
         <AppLink href="/news" label="See More" variant="secondary" className="border border-1 border-primary-green text-[14px] px-[2rem] py-[12px] rounded-[3.4px] font-medium hover:bg-primary-green/80 
         hover:text-white transition-all duration-300"/>
-      </motion.div>
+      </div>
     </section>
   );
 } 

@@ -36,14 +36,11 @@ export default function AboutCommisioner({imgSrc, title}: AboutCommisionerProps)
                 transition={{ease:"easeInOut", duration:0.8}}
                 className="flex-1 w-full md:w-auto mt-6 md:mt-0"
             >
-                <motion.h2 
-                    initial={{y:40}}
-                    whileInView={{y:0}}
-                    transition={{ease:"linear", duration:0.7}}
+                <h2 
                     className="text-xl md:text-2xl lg:text-[43px] font-bold text-dark-primary mb-4"
                 >
                     {title}
-                </motion.h2>
+                </h2>
                 <p className="text-dark-primary-body text-base mb-4">
                     Hon. Dr. Emeka Mandela Ukaegbu, Imo State&apos;s Commissioner for Youth Development and Talent Hunt, leads transformative programs that harness youth potential across sports, ICT, agriculture, and business. 
                     By collaborating with SWAN and state ministries, he implements a robust Talent-Hunt platform that promotes chess, javelin, marathons, and digital innovation. His flagship event, the &quot;Running for Peace&quot; Marathon (May 2025), awarded ₦500,000 to winners, promoting fitness and civic unity. 

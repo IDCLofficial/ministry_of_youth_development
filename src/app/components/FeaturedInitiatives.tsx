@@ -46,7 +46,7 @@ export default function FeaturedInitiatives() {
             <div className="relative w-full h-[140px] md:h-[200px] z-0">
               <Image src={link.img} alt={link.title} fill className="object-cover" />
             </div>
-            <div className="max-md:w-full flex-1 flex flex-col justify-between md:items-end p-2 md:p-4 bg-white mx-auto shadow-md">
+            <div className="max-md:w-full flex-1 flex flex-col justify-between md:items-end px-2 py-4 md:p-4 bg-white mx-auto shadow-md">
                 <div>
                     <h3 className={`text-dark-secondary text-base font-bold mb-2`}>{link.title}</h3>
                     <p className="text-dark-primary-body text-[1rem] mb-4 md:mb-6">{link.desc}</p>
