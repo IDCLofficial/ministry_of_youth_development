@@ -5,18 +5,6 @@ export const ObjectivesSection = () => {
             description: "Coordinating state-wide programs like multi-sport scouting, innovation competitions, and creative showcases."
         },
         {
-            title: "Youth Capacity Building",
-            description: "Rolling out transformative initiatives including SkillUpImo, aimed at equipping youth with digital and entrepreneurial skills for the 21st-century economy."
-        },
-        {
-            title: "Civic & Security Engagement",
-            description: "Hosting forums, security summits, and mentorship collaborations with DSS and the Nigerian Army to promote peace, discipline, and civic-mindedness. \nStrategic Partnerships"
-        },
-        {
-            title: "Imo State Sports Commission",
-            description: "Works alongside the ministry to bring sports talents to the fore and create pathways for athlete development. "
-        },
-        {
             title: "SWAN – Sports Writers Association of Nigeria",
             description: "A key publicity partner promoting the state’s youth initiatives and talent exposure."
         },
@@ -30,10 +18,7 @@ export const ObjectivesSection = () => {
         "Enlightenment",
         "Engagement",
         "Empowerment",
-        "Inclusiveness",
-        "Integrity",
-        "Excellence",
-        "Social Responsibility"
+        "Integrity"  
     ];
 
     return (
