@@ -5,7 +5,7 @@ export const ObjectivesSection = () => {
             description: "Coordinating state-wide programs like multi-sport scouting, innovation competitions, and creative showcases."
         },
         {
-            title: "SWAN – Sports Writers Association of Nigeria",
+            title: "Sports Writers Association of Nigeria (SWAN)",
             description: "A key publicity partner promoting the state’s youth initiatives and talent exposure."
         },
         {
