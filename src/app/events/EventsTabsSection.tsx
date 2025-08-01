@@ -58,7 +58,7 @@ export default function EventsTabsSection() {
         <div className="w-full max-w-xl mb-4">
           <Image src={active.image} alt={active.name} width={600} height={300} className="rounded-xl object-cover" />
         </div>
-        <p className="text-gray-700 text-sm md:text-base">{active.description}</p>
+        <p className="text-gray-700 text-base">{active.description}</p>
       </div>
     </section>
   );

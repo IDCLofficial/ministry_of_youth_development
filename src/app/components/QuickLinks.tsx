@@ -19,7 +19,7 @@ const links = [
   {
     title: "Events",
     desc: "See our upcoming events.",
-    img: "/images/homeImage3.jpg",
+    img: "/icons/schedule.png",
     href: "/events"
   },
   {
@@ -42,10 +42,10 @@ export default function QuickLinks() {
       >
         {links.map((link) => (
           <div key={link.title} className="flex flex-col items-center h-full relative">
-            <div className="relative w-full h-[180px] md:h-[200px] z-0">
-              <Image src={link.img} alt={link.title} fill className="object-fit" />
-            </div>
-            <Link href={link.href} className="flex-1 flex flex-col justify-between relative p-4 md:p-6 bg-white -mt-[30px] md:-mt-[30px] 
+            {/* <div className="relative w-full h-[180px] md:h-[200px] z-0">
+              <Image src={link.img} alt={link.title} width={200} height={200} className="object-center w-full" />
+            </div> */}
+            <Link href={link.href} className="flex-1 flex flex-col justify-between relative p-4 md:p-6 bg-white  
             w-[90%] h-[120px] md:h-[180px] mx-auto shadow-md hover:scale-105 transition-all duration-300">
               <div>
                 <h3 className={`text-dark-secondary text-base md:text-lg font-bold mb-2`}>{link.title}</h3>

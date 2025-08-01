@@ -1,5 +1,6 @@
 import React from "react";
 import MediaGalleryCard from "./MediaGalleryCard";
+import { media } from "./media";
 
 interface MediaItem {
   image: string;

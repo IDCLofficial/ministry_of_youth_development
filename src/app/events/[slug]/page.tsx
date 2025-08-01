@@ -72,7 +72,8 @@ function Countdown({ eventDateTime }: { eventDateTime: string }) {
 
 export default function EventDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
-  const event = events.find(e => e.slug === slug);
+  const decoded = decodeURIComponent(slug)
+  const event = events.find(e => e.slug === decoded);
   if (!event) {
     return (
       <div className="bg-white min-h-screen flex flex-col items-center justify-center">

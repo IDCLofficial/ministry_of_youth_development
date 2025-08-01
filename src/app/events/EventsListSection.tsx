@@ -44,7 +44,7 @@ export default function EventsListSection() {
                     <span>{event.location}</span>
                   </div>
                   <h3 className="text-xl font-medium mb-1">{event.title}</h3>
-                  <p className="text-dark-primary-body text-base mb-2">{event.description}</p>
+                  <p className="text-dark-primary-body text-base mb-2 line-clamp-3 overflow-ellipsis">{event.description}</p>
                 </div>
                 <div className="flex justify-end md:justify-center">
                   <Link href={`/events/${event.slug}`} className="border border-primary-green text-primary-green text-[14px] px-4 py-2 rounded font-semibold hover:bg-green-50 transition">More Information</Link>

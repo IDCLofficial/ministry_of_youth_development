@@ -1,5 +1,5 @@
 import NewsCard from "./NewsCard";
-import newsList from "./newsList";
+import {newsList} from "./newsList";
 
 export default function NewsGrid() {
   return (

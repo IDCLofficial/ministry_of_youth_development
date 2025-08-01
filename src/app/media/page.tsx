@@ -3,6 +3,8 @@ import MediaHeroSection from "./MediaHeroSection";
 import MediaGalleryGrid from "./MediaGalleryGrid";
 import Footer from "../components/Footer";
 import CTASection from "../components/CTASection";
+import { media } from "./media";
+console.log(media)
 
 const mediaItems: [] = [];
 

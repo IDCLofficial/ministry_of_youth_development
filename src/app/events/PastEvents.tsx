@@ -62,7 +62,7 @@ export default function PastEvents() {
                             <div className="flex flex-col">
                                 <span className="text-xs text-gray-500 mb-1">{event.date} | {event.location}</span>
                                 <h3 className="text-lg font-semibold mb-1">{event.title}</h3>
-                                <p className="text-sm text-gray-700 mb-2">{event.description}</p>
+                                <p className="text-sm text-gray-700 mb-2 line-clamp-3 overflow-ellipsis">{event.description}</p>
                                 <Link href={`/events/${event.slug}`} className="w-max border border-primary-green text-primary-green text-[14px] px-4 py-2 rounded font-semibold hover:bg-green-50 transition mt-2">More Information</Link>
                             </div>
                         </div>
