@@ -14,9 +14,9 @@ const teamMembers = [
         imgSrc: "/images/commissioner.jpg"
     },
     {
-        name: "Not available",
+        name: "Dr. Mirikwe Dorathy Ekeoma",
         position: "Permanent Secretary",
-        imgSrc: ""
+        imgSrc: "/images/permSec.jpeg"
     }
 ]
 
@@ -30,9 +30,7 @@ export default function AboutUs() {
                 altText="Ministry of Sports and Youth Development conference event" 
             />
             <MVSSection /> 
-            <section className="w-full py-10 md:py-16 px-2 md:px-4 bg-white mx-auto flex flex-col items-center">
-                <TeamGridSection members={teamMembers} />
-            </section>  
+            <TeamGridSection members={teamMembers} />
             <ObjectivesSection />
             <StructuresSection 
                 imgSrc="/images/building.png"
