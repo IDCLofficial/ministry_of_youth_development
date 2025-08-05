@@ -6,10 +6,7 @@ const contactInfo = {
   email: "info@imdeeg.im.gov.ng",
   phone: "+234 803 123 4567",
   socials: [
-    { icon: <FaFacebookF />, href: "#" },
-    { icon: <FaTwitter />, href: "#" },
-    { icon: <FaInstagram />, href: "#" },
-    { icon: <FaLinkedinIn />, href: "#" },
+    { icon: <FaFacebookF />, href: "https://www.facebook.com/share/1EqnUZZZ2f/" },
   ],
 };
 
