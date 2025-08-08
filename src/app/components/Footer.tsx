@@ -63,6 +63,12 @@ import React, { useState } from "react";
 export default function Footer() {
     const [success, setSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
+    React.useEffect(() => {
+        if (success) {
+            const timer = setTimeout(() => setSuccess(false), 2500);
+            return () => clearTimeout(timer);
+        }
+    }, [success]);
     return (
         <footer className="w-full bg-white pt-10 px-4 lg:px-18">
             <div className="mx-auto px-4 flex flex-col md:flex-row justify-between gap-8 pb-8">
@@ -123,7 +129,28 @@ export default function Footer() {
                     </button>
                 </form>
                 {success && (
-                    <div className="text-green-600 text-xs mb-2 animate-fade-in">Thank you for subscribing!</div>
+                    <div className="fixed right-6 z-50 animate-fade-in top-30">
+                    <div className="bg-white border border-green-300 shadow-lg px-6 py-4 rounded-lg flex items-center gap-3 min-w-[220px] relative">
+                        <span className="text-green-600 text-base font-medium">Thank you for subscribing!</span>
+                        <button
+                        className="absolute top-2 right-2 text-gray-400 hover:text-gray-700 text-lg"
+                        onClick={() => setSuccess(false)}
+                        aria-label="Close"
+                        type="button"
+                        >
+                        &times;
+                        </button>
+                    </div>
+                    <style jsx global>{`
+                        @keyframes fade-in {
+                        from { opacity: 0; transform: translateY(-20px); }
+                        to { opacity: 1; transform: translateY(0); }
+                        }
+                        .animate-fade-in {
+                        animation: fade-in 0.4s cubic-bezier(0.4,0,0.2,1);
+                        }
+                    `}</style>
+                    </div>
                 )}
                 <div className="text-xs text-gray-700 space-y-1 flex flex-col">
                     {info.contact.map((item) => (
