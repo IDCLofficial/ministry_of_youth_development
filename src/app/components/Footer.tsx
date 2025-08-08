@@ -52,7 +52,7 @@ const info = {
             href: "/"
         },  
         {
-            label: "No information",
+            label: "Imo state secretariat, port harcourt road, Owerri, Imo State",
             href: "/"
         },
     ]
