@@ -2,7 +2,7 @@ import React from "react";
 import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const contactInfo = {
-  address: "",
+  address: "no information",
   email: "comnyouthimsg@gmail.com",
   phone: "+234 803 705 5051",
   socials: [
