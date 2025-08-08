@@ -129,7 +129,7 @@ export default function Footer() {
                     </button>
                 </form>
                 {success && (
-                    <div className="fixed right-6 z-50 animate-fade-in top-30">
+                    <div className="animate-fade-in top-30">
                     <div className="bg-white border border-green-300 shadow-lg px-6 py-4 rounded-lg flex items-center gap-3 min-w-[220px] relative">
                         <span className="text-green-600 text-base font-medium">Thank you for subscribing!</span>
                         <button
