@@ -23,7 +23,7 @@ export default function LatestNews() {
           >
             <div className="w-full overflow-hidden whitespace-normal flex flex-col">
               <div className="relative w-full h-[220px] md:h-[220px]">
-                <Image src={item.img} alt={item.title} fill className="object-fit" />
+                <Image src={item.img} alt={item.title} fill className="object-cover object-[50%_20%] h-full w-full" />
               </div>
               <div className="p-4 md:p-5 flex-1 flex flex-col">
                 <h3 className="text-dark-secondary text-base md:text-[15px] font-bold mb-2 uppercase leading-snug">{item.title}</h3>

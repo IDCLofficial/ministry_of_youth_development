@@ -18,7 +18,7 @@ export default function FeaturedInitiatives() {
         {projects.map((project) => (
           <div key={project.title} className="bg-white flex flex-col items-center h-full relative cursor-pointer hover:scale-105 transition-all duration-300">
             <div className="relative w-full h-[250px] md:h-[210px] z-0">
-              <Image src={project.image} alt={project.title} fill className="object-center" />
+              <Image src={project.image} alt={project.title} fill className="object-cover object-[50%_20%] h-full w-full" />
             </div>
             <div className="max-md:w-full flex-1 flex flex-col justify-between md:items-end px-2 py-4 md:p-4 bg-white mx-auto shadow-md">
                 <div>

@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 
@@ -43,21 +44,25 @@ const info = {
     ],
     contact: [
         {
-            label: "+2349130270514",
+            label: "+2348037055051",
             href: "/"
         },
         {
-            label: "Info@myd.im.gov.ng",
+            label: "comnyouthimsg@gmail.com",
             href: "/"
         },  
         {
-            label: "28 Egbu Road, Owerri, Imo State",
+            label: "No information",
             href: "/"
         },
     ]
 }
 
+import React, { useState } from "react";
+
 export default function Footer() {
+    const [success, setSuccess] = useState(false);
+    const [loading, setLoading] = useState(false);
     return (
         <footer className="w-full bg-white pt-10 px-4 lg:px-18">
             <div className="mx-auto px-4 flex flex-col md:flex-row justify-between gap-8 pb-8">
@@ -86,14 +91,40 @@ export default function Footer() {
                 {/* Newsletter and Contact */}
                 <div className="flex-1">
                 <h4 className="font-semibold text-gray-900 mb-3">{info.newsletter[0].label}</h4>
-                <form className="flex mb-3">
+                <form className="flex mb-3" onSubmit={async (e) => {
+                    e.preventDefault();
+                    setSuccess(false);
+                    setLoading(true);
+                    // Simulate async subscription (replace with API call if needed)
+                    setTimeout(() => {
+                        setSuccess(true);
+                        setLoading(false);
+                    }, 1000);
+                }}>
                     <input
-                    type="email"
-                    placeholder="Myemail@gmail.com"
-                    className="border border-gray-300 rounded-l px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                        type="email"
+                        placeholder="Myemail@gmail.com"
+                        className="border border-gray-300 rounded-l px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                        disabled={loading}
                     />
-                    <button type="submit" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-r text-sm font-medium">{info.newsletter[1].label}</button>
+                    <button
+                        type="submit"
+                        className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-r text-sm font-medium flex items-center justify-center min-w-[100px]"
+                        disabled={loading}
+                    >
+                        {loading ? (
+                            <span className="flex items-center gap-1">
+                                <svg className="animate-spin h-4 w-4 mr-1 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path></svg>
+                                Loading
+                            </span>
+                        ) : (
+                            info.newsletter[1].label
+                        )}
+                    </button>
                 </form>
+                {success && (
+                    <div className="text-green-600 text-xs mb-2 animate-fade-in">Thank you for subscribing!</div>
+                )}
                 <div className="text-xs text-gray-700 space-y-1 flex flex-col">
                     {info.contact.map((item) => (
                         <Link href={item.href} key={item.label}>{item.label}</Link>

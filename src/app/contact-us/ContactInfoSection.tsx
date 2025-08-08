@@ -2,11 +2,11 @@ import React from "react";
 import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const contactInfo = {
-  address: "Ministry of Digital Economy & E-Government, State Secretariat Complex, Port Harcourt Road, New Owerri, Imo State, Nigeria.",
-  email: "info@imdeeg.im.gov.ng",
-  phone: "+234 803 123 4567",
+  address: "",
+  email: "comnyouthimsg@gmail.com",
+  phone: "+234 803 705 5051",
   socials: [
-    { icon: <FaFacebookF />, href: "https://www.facebook.com/share/1EqnUZZZ2f/" },
+    { icon: <FaFacebookF />, href: "https://www.facebook.com/profile.php?id=61562019780038" },
   ],
 };
 

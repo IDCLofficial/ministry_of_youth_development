@@ -1,7 +1,10 @@
-import events from "../events/eventsList";
-import newsList from "../news/newsList";
+type media = {
+    title: string;
+    date: string;
+    img: string;
+}
 
-export const media = [...events, ...newsList];
+export const media = [];
 
 console.log(media)
 
