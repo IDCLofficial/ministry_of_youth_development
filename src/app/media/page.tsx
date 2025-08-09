@@ -5,8 +5,6 @@ import Footer from "../components/Footer";
 import CTASection from "../components/CTASection";
 import { media } from "./media";
 
-const mediaItems: [] = [];
-
 export default function MediaPage() {
   return (
     <main className="min-h-screen w-full bg-[#F7F9FA] flex flex-col">
@@ -16,7 +14,7 @@ export default function MediaPage() {
         backgroundImage="/images/heroImage.png"
       />
       <section className="w-full max-w-7xl mx-auto py-12 px-4">
-        <MediaGalleryGrid items={mediaItems} />
+        <MediaGalleryGrid items={media} />
       </section>
       <CTASection 
         heading="Partner with Us Today!"
