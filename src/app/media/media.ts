@@ -19,6 +19,11 @@ export const media = [
         title:"Hon. Dr. Emeka Mandela Celebrates Young Graduates at Madonna Group of Schools-Encourages Moral Excellence and Academic Pursuit",
         img:"/media/image3.jpg",
         isVideo: false
+    },
+    {
+        title: "FACULTY OF VOCATIONAL AND TECHNOLOGY EDUCATION WELCOMES HON. DR. EMEKA MANDELA AT 2025 WORLD YOUTH SKILLS DAY CELEBRATION",
+        img: "/media/image4.png",
+        isVideo: false
     }
 ];
 

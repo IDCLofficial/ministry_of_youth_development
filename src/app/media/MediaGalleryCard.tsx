@@ -11,7 +11,7 @@ const MediaGalleryCard: React.FC<MediaGalleryCardProps> = ({ image, title, isVid
   return (
     <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col cursor-pointer transition hover:shadow-md">
       <div className="relative w-full h-48">
-        <Image src={image} alt={title} fill className="object-cover" />
+        <Image src={image} alt={title} fill className="object-cover h-full w-full object-[50%_40%]" />
         {isVideo && (
           <span className="absolute inset-0 flex items-center justify-center">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 
 export default async function NewsDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const news = newsList.find(item => slugify(item.title) === slug);
+  const news = newsList.find(item => item.title === decodeURIComponent(slug));
 
   if (!news) {
     return (
