@@ -14,9 +14,6 @@ import { NewsPost, Project } from "../../lib/types";
 export default async function Home() {
   const getNews = await getNewsList();
   const getProjects = await getProject();
-
-  console.log(getNews)
-  console.log(getProjects)
   
   return (
     <div className="h-screen w-full bg-red-400">
