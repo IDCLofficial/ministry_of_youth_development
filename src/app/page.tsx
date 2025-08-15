@@ -7,8 +7,17 @@ import Stats from "@/app/components/Stats";
 import CTASection from "@/app/components/CTASection";
 import Footer from "@/app/components/Footer";
 import FeaturedInitiatives from "./components/FeaturedInitiatives";
+import { getNewsList } from "./news/newsList";
+import { getProject } from "./projects/projects";
+import { NewsPost, Project } from "../../lib/types";
 
-export default function Home() {
+export default async function Home() {
+  const getNews = await getNewsList();
+  const getProjects = await getProject();
+
+  console.log(getNews)
+  console.log(getProjects)
+  
   return (
     <div className="h-screen w-full bg-red-400">
       <Hero
@@ -27,10 +36,10 @@ export default function Home() {
         title="About The Commissioner" 
       />
       <section className="w-full flex flex-col gap-4">
-        <FeaturedInitiatives />
+        <FeaturedInitiatives projects={getProjects as unknown as Project[]}/>
         <QuickLinks />
         {/* <Advertisement /> */}
-        <LatestNews />
+        <LatestNews newsList={getNews as unknown as NewsPost[]}/>
       </section>
       <Stats />
       {/* <FeaturedPartners /> */}

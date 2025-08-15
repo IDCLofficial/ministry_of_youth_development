@@ -1,25 +1,6 @@
-export const newsList = [
-  {
-    title:"Welcome of the female youths of super falcons after WAFCON victory",
-    date: "July 30, 2025",
-    img: "/images/falcons.jpg",
-    badge:"sports",
-    desc: "The Imo State Ministry of Youth Development and Talent Hunt, through the Hon. Commissioner for Youth Development, Hon. Dr. Emeka Mandela, has extended heartfelt congratulations to the 7  Imo born female youths of Super Falcons of Nigeria on their triumphant victory at the 2025 Women’s Africa Cup of Nations (WAFCON), with special commendation to the outstanding players of Imo origin who contributed immensely to the historic win. Joining His Excellency, Dist. Sen. Hope Uzodimma (CON), the Pan-Nigerian Youth Governor, the Ministry applauded the resilience, discipline, and brilliance displayed by the Falcons, particularly the Imo born athletes who flew Nigeria’s and Imo’s flag with pride especially Chiamaka Nnadozie, Osinachi Ohale, Tochukwu Oluehi, Jennifer Echegini, and Anam Imo among others Hon. Dr. Mandela described these young women as “symbols of excellence, resilience, and possibility,” noting that their performance serves as an inspiration to youths across Imo State and the country. The Commissioner also reaffirmed the Ministry’s commitment to deepening youth engagement in sports and empowering young talents across all 27 LGAs of the state. The Ministry’s message is part of a statewide celebration of the Falcons’ victory(their tent), which not only elevated Nigeria’s standing in African football but also amplified the crucial role of grassroots and state level investment in youth development."
-  },
-  {
-    title: "Hon. Dr. Emeka Mandela Celebrates Young Graduates at Madonna Group of Schools-Encourages Moral Excellence and Academic Pursuit",
-    date: "July 24, 2025",
-    img: "/images/madonna.jpg",
-    badge: "news",
-    desc: "I had the honour of attending the graduation ceremony of students at Madonna Group of Schools, Owerri. It was truly heartwarming to witness the joy, pride, and hopeful excitement radiating from these young minds, their parents, and teachers. In my address, I encouraged the graduating pupils to hold fast to the values of good conduct, integrity, and discipline , reminding them that in today’s world, character remains a priceless currency. I told them that with trustworthiness and purpose, the sky won’t be their limit , it will be their stepping stone. I also shared words of hope, especially for those who may be uncertain about the next phase of their academic journey. Life may present challenges, but there is always light at the end of the tunnel for those who press forward with resilience, focus, and faith. To the parents, I offered words of encouragement as well , urging them to continue supporting their children through prayer, motivation, and guidance. Education is a shared journey, and the presence of faith and values in the home goes a long way in shaping young destinies. I sincerely thank the management and staff of Madonna Group of Schools for inviting me to be part of such a significant milestone in the lives of our future leaders. Let us keep nurturing and guiding them. They are the architects of a greater tomorrow."
-  },
-  {
-    title: "HON. DR. EMEKA MANDELA RECEIVES NIGERIAN OPTOMETRIC STUDENTS ASSOCIATION (NOSA), IMO STATE UNIVERSITY",
-    date: "July 22, 2025",
-    img: "/images/optometry_student.jpg",
-    badge: "news",
-    desc: "Hon. Dr. Emeka Mandela, Imo State Commissioner for Youth Development and Talent Hunt, warmly received a delegation from the Nigerian Optometric Students Association (NOSA), Imo State University, at his office in New Owerri. The visit aimed to familiarize the students with the Commissioner's office and officially inform Dr. Mandela about their upcoming Annual Health Week event. The delegation, led by its President, Comr. Vivian Anyanwu, expressed heartfelt appreciation for the warm reception and commended the numerous life-changing programs executed by the Youth Development Ministry under Dr. Mandela's leadership. Comr. Anyanwu acknowledged the gigantic infrastructural development and youth empowerment initiatives championed by Governor Hope Uzodinma's 3R Administration. Comr. Anyanwu officially informed Dr. Mandela about the Annual Health Week event scheduled to hold from August 11th to 15th, 2025. The event will feature various activities, including free eye screening exercises, free drugs and eye lenses/glasses, and an award dinner night. She described the initiative as a way of giving back to the society and sought Dr. Mandela's support and presence during the event. This initiative will greatly benefit the students and the community at large, providing them with essential healthcare services and promoting awareness about eye care. Dr. Mandela appreciated the group's visit and lauded their dedication to serving humanity. He highlighted the significance of Optometry as a frontline medical course and assured the group of full support. Dr. Mandela encouraged them to interface with other relevant quarters, including the Health Ministry, to ensure a purposeful accomplishment. The Commissioner praised the students for their proactive approach to community service and encouraged them to continue making positive impacts in their society. Dr. Mandela's words of encouragement were well-received, and he reiterated his commitment to supporting their initiatives. The Nigerian Optometric Students Association (NOSA) is a shining example of young people making a difference in their community through initiatives like the Annual Health Week event, which demonstrates Dr. Mandela's commitment to supporting youth initiatives and promoting community development in Imo State."
-  }
-];
+import { contentfulService } from "../../../lib/contentful";
 
-export default newsList; 
+export async function getNewsList(){
+  const newsList = await contentfulService.getBlogsByMinistry(process.env.NEXT_PUBLIC_CONTENTFUL_MINISTRY_ID!);
+  return newsList;
+}
