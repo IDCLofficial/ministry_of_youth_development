@@ -13,7 +13,7 @@ export default function LatestNews({newsList}:{newsList:NewsPost[]}) {
         initial = {{opacity: 0, y:80}}
         whileInView={{opacity: 1, y: 0}}
         transition={{ease:"easeInOut", duration:0.8}}
-        className="w-full mx-auto whitespace-nowrap gap-6 md:gap-8 px-0 md:px-4 mb-8 md:animate-infiniteScroll"
+        className="w-full mx-auto whitespace-nowrap gap-6 md:gap-8 px-0 md:px-4 mb-8"
       >
         {newsList.slice(0,3).map((item, idx) => (
           <Link 
