@@ -10,6 +10,7 @@ import FeaturedInitiatives from "./components/FeaturedInitiatives";
 import { getNewsList } from "./news/newsList";
 import { getProject } from "./projects/projects";
 import { NewsPost, Project } from "../../lib/types";
+import Advert from "./components/economic-summit/Advert";
 
 export default async function Home() {
   const getNews = await getNewsList();
@@ -28,6 +29,7 @@ export default async function Home() {
         image1="/images/homeImage1.jpg"
         image2="/images/homeImage2.jpg"
       />
+      <Advert />
       <AboutCommisioner 
         imgSrc="/images/commissioner.jpg" 
         title="About The Commissioner" 
