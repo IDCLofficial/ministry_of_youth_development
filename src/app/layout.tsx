@@ -42,6 +42,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          src="https://pulse-track.onrender.com/tracker.min.js"
+          data-key="pk_live_2e1d17ba5516802dff9ddbc9"
+          defer
+        />
+      </head>
       <body
         className={`antialiased ${satoshiFont.className}`}
       >
