@@ -6,6 +6,14 @@ import CTASection from "../components/CTASection";
 import getMedia from "./media";
 import { Media } from "../../../lib/types";
 import { contentfulService } from "../../../lib/contentful";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Media Gallery",
+  description: "Photo and media gallery of the Ministry of Youth Development & Talent Hunt, Imo State Government.",
+  path: "/media",
+});
+
 
 export default async function MediaPage() {
   const media = await getMedia();

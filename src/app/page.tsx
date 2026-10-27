@@ -11,6 +11,14 @@ import { getNewsList } from "./news/newsList";
 import { getProject } from "./projects/projects";
 import { NewsPost, Project } from "../../lib/types";
 import Advert from "./components/economic-summit/Advert";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: { absolute: "Ministry of Youth Development & Talent Hunt | Imo State Government" },
+  description: "Official website of the Ministry of Youth Development & Talent Hunt, Imo State Government: services, departments, projects, news and events.",
+  path: "/",
+});
+
 
 export default async function Home() {
   const getNews = await getNewsList();
