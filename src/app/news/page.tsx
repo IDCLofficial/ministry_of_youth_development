@@ -8,7 +8,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "News",
-  description: "Latest news, announcements and updates from the Ministry of Youth Development & Talent Hunt, Imo State.",
+  description: "Latest news, announcements and updates from the Ministry of Youth Development and Talent Hunt, Imo State.",
   path: "/news",
 });
 

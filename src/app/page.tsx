@@ -14,8 +14,8 @@ import Advert from "./components/economic-summit/Advert";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: { absolute: "Ministry of Youth Development & Talent Hunt | Imo State Government" },
-  description: "Official website of the Ministry of Youth Development & Talent Hunt, Imo State Government: services, departments, projects, news and events.",
+  title: { absolute: "Imo State Ministry of Youth Development and Talent Hunt" },
+  description: "Youth empowerment, skills training, talent hunts and civic leadership programmes in Imo State, including SkillUpImo digital skills training.",
   path: "/",
 });
 

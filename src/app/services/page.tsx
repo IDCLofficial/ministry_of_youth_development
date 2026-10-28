@@ -5,8 +5,8 @@ import ServicesSection from "./ServicesSection";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Services",
-  description: "Services offered by the Ministry of Youth Development & Talent Hunt of the Imo State Government.",
+  title: "Youth Empowerment, Talent Hunt and Leadership Programmes",
+  description: "Skills acquisition and vocational training, talent identification, civic reorientation and leadership training, youth grants and policy advocacy in Imo State.",
   path: "/services",
 });
 
